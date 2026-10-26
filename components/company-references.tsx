@@ -82,7 +82,7 @@ export default function CompanyReferences() {
             {companies.map((company) => (
               <div
                 key={company.name}
-                className={`flex h-12 w-28 shrink-0 snap-start items-center justify-center opacity-65 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 sm:w-32 ${
+                className={`flex h-12 w-28 shrink-0 snap-start items-center justify-center sm:w-32 ${
                   company.iconOnly ? "gap-2" : ""
                 }`}
               >

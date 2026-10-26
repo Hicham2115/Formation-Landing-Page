@@ -30,7 +30,7 @@ export default function BrandLockup({
         </span>
         <span
           className={`text-[9px] font-medium leading-none tracking-[.16em] ${
-            inverse ? "text-black" : "text-neutral-700"
+            inverse ? "text-white/55" : "text-neutral-700"
           }`}
         >
           FORMATION PROFESSIONNELLE
