@@ -26,7 +26,7 @@ const facts = [
     accessibleValue: "675–695 nm",
     unit: "nm",
     title: "Longueur d’onde",
-    detail: "Valeur indiquée dans la brochure de la formation.",
+    detail: "Plage de longueur d’onde de l’appareil laser.",
   },
   {
     target: 2,
@@ -34,7 +34,7 @@ const facts = [
     accessibleValue: "2 ans",
     unit: "ans",
     title: "Garantie de l’appareil",
-    detail: "Durée annoncée dans la brochure de l’organisateur.",
+    detail: "Garantie de l’appareil à compter de la date d’achat.",
   },
 ];
 

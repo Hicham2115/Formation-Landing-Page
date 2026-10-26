@@ -26,7 +26,7 @@ const modules = [
       "Histoire et origines",
       "Définition et principes généraux",
       "Différences entre auriculothérapie, acupuncture et auriculomédecine",
-      "Données scientifiques et efficacité abordées dans la brochure",
+      "Données scientifiques et question de l’efficacité",
     ],
   },
   {
@@ -104,9 +104,9 @@ export default function ProgramSection() {
           </h2>
         </div>
         <p className="max-w-md text-sm leading-7 text-white/65 sm:justify-self-end">
-          Sept modules pour poser les bases, comprendre les mécanismes et
-          découvrir des exemples de protocoles dédiés aux addictions et aux
-          états émotionnels.
+          Pour les médecins et professionnels de santé : sept modules pour
+          découvrir les repères auriculaires, l’appareil laser et les protocoles
+          étudiés pendant la formation.
         </p>
       </div>
 

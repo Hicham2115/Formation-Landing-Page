@@ -36,8 +36,8 @@ export default function SiteFooter() {
                 <BrandLockup inverse />
               </a>
               <p className="mt-5 text-sm leading-6 text-white">
-                Une formation professionnelle en réflexologie auriculaire par
-                bio-stimulation laser, à Mohammedia.
+                Une journée de formation au laser auriculaire pour les médecins
+                et professionnels de santé, à Mohammedia.
               </p>
             </div>
 
@@ -70,9 +70,13 @@ export default function SiteFooter() {
                 <Phone size={15} className="text-brand" />
                 +212 613 755 122
               </a>
-              <p className="mt-3 text-sm text-white">
-                Mohammedia, Maroc
-              </p>
+              <address className="mt-3 space-y-1 text-sm leading-5 text-white not-italic">
+                <span className="block">Centre Addic’s Laser</span>
+                <span className="block">Immeuble West Coast Office</span>
+                <span className="block">Boulevard Hassan II</span>
+                <span className="block">28800 Mohammedia, Maroc</span>
+                <span className="block">À 5 minutes de la gare</span>
+              </address>
             </div>
           </div>
 
@@ -87,9 +91,8 @@ export default function SiteFooter() {
           </div>
 
           <p className="mt-5 max-w-4xl text-[10px] leading-5 text-white">
-            Les informations relatives à la formation, aux certifications et à
-            l’appareil sont présentées selon la brochure fournie par
-            l’organisateur. Elles ne constituent pas un avis médical.
+            Cette formation ne remplace pas un diagnostic ni une prise en
+            charge médicale adaptée à chaque patient.
           </p>
         </footer>
 

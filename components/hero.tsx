@@ -18,29 +18,26 @@ export default function Hero() {
         <div className="flex flex-col justify-center px-7 py-12 sm:px-12 lg:px-16 lg:py-16">
           <p className="mb-8 inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/[.04] px-3.5 py-2 text-[9px] font-bold uppercase tracking-[.2em] text-white motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
             <span className="size-1.5 rounded-full  bg-brand motion-safe:animate-[pulse-dot_2.2s_ease-in-out_infinite]" />
-            Formation professionnelle <span className="text-white/30">·</span>{" "}
-            Mohammedia
+            Formation pour les professionnels de santé{" "}
+            <span className="text-white/30">·</span> Mohammedia
           </p>
-          <h1 className="max-w-[650px] text-[clamp(1.9rem,4.8vw,5.3rem)] font-medium leading-[.96] tracking-[-.075em]">
+          <h1 className="max-w-[650px] text-[clamp(2.2rem,4.8vw,5.3rem)] font-medium leading-[.96] tracking-[-.075em]">
             <span className="block overflow-hidden pb-[.08em]">
               <span className="inline-block whitespace-nowrap motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:160ms]">
-                Un Nouvel Outil Pour
+                Apprenez le
               </span>
             </span>
             <span className="block overflow-hidden pb-[.08em]">
-              <em className="inline-block pr-2 font-normal italic text-brand motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:300ms]">
-                Accompagner
-              </em>
-            </span>
-            <span className="block overflow-hidden pb-[.08em]">
-              <span className="inline-block motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:440ms]">
-                Le Changement.
+              <span className="inline-block pr-2 font-normal  text-brand motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:300ms]">
+                laser auriculaire.
               </span>
             </span>
           </h1>
           <p className="mt-7 max-w-lg text-sm leading-7 text-white/90 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:540ms] sm:text-base">
-            Découvrez la réflexologie auriculaire par bio-stimulation laser,
-            appliquée aux addictions et aux états émotionnels.
+            Une journée pour les médecins et professionnels de santé : découvrez
+            les bases de la réflexologie auriculaire par bio-stimulation laser,
+            l’appareil et les protocoles présentés pour accompagner vos
+            patients.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:640ms]">
             <a

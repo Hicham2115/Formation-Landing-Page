@@ -52,8 +52,8 @@ export default function TrainerSection() {
           <p>
             Psychothérapeute, formatrice et fondatrice de Full International
             Academy, Siham Boulla anime cette journée autour de la réflexologie
-            auriculaire et de la bio-stimulation laser. La brochure souligne
-            son expérience des approches intégratives.
+            auriculaire et de la bio-stimulation laser. Son parcours associe
+            psychothérapie, formation et approches intégratives.
           </p>
           <p>
             Forte de près de 22 ans d’expérience en communication, relations
@@ -73,17 +73,18 @@ export default function TrainerSection() {
         </div>
 
         <div className="mt-10 border-y border-divider py-5 sm:mt-12 sm:py-6">
-          <p className="mb-5 text-[10px] font-semibold tracking-[.18em] text-neutral-500">
+          <p className="mb-5 flex items-center gap-2 text-[10px] font-semibold tracking-[.18em] text-neutral-500">
+            <span aria-hidden="true" className="h-px w-5 bg-brand" />
             SON PARCOURS
           </p>
-          <ul className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+          <ul className="grid gap-x-8 sm:grid-cols-2">
             {credentials.map((credential, index) => (
               <li
                 key={credential}
-                className={`flex items-center gap-3 text-base leading-6 text-ink ${index === 2 ? "sm:col-span-2" : ""}`}
+                className={`flex min-h-14 items-center gap-3 border-t border-divider/80 py-3 text-[15px] font-medium leading-6 text-ink sm:text-base ${index === 2 ? "sm:col-span-2" : ""}`}
               >
-                <span className="grid size-9 shrink-0 place-items-center rounded-full bg-soft text-brand">
-                  <Check size={15} strokeWidth={2.25} />
+                <span className="grid size-7 shrink-0 place-items-center rounded-full border border-brand/25 bg-brand/[.045] text-brand">
+                  <Check size={13} strokeWidth={2.5} />
                 </span>
                 <span>{credential}</span>
               </li>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Label from "@/components/section-label";
 
 const companies: { name: string; logo: string; iconOnly?: boolean }[] = [
@@ -29,6 +29,41 @@ const companies: { name: string; logo: string; iconOnly?: boolean }[] = [
 export default function CompanyReferences() {
   const logoRail = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const rail = logoRail.current;
+    if (!rail || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    let direction: -1 | 1 = 1;
+    const interval = window.setInterval(() => {
+      if (
+        document.hidden ||
+        rail.matches(":hover") ||
+        rail.matches(":focus-within")
+      ) {
+        return;
+      }
+
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+      if (maxScroll <= 0) return;
+
+      if (direction === 1 && rail.scrollLeft >= maxScroll - 2) direction = -1;
+      if (direction === -1 && rail.scrollLeft <= 2) direction = 1;
+
+      const firstLogo = rail.firstElementChild as HTMLElement | null;
+      if (!firstLogo) return;
+
+      const gap = Number.parseFloat(getComputedStyle(rail).columnGap) || 0;
+      rail.scrollBy({
+        left: (firstLogo.getBoundingClientRect().width + gap) * direction,
+        behavior: "smooth",
+      });
+    }, 5000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   function moveLogos(direction: -1 | 1) {
     const rail = logoRail.current;
     if (!rail) return;
@@ -48,7 +83,7 @@ export default function CompanyReferences() {
       <div className="grid items-center gap-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-10">
         <div>
           <Label>QUELQUES RÉFÉRENCES</Label>
-          <p className="max-w-[260px] text-xs leading-5 text-neutral-600">
+          <p className="max-w-[260px] text-xs leading-5 text-black">
             18 références professionnelles, dans des secteurs variés de la santé
             à l’industrie et aux services.
           </p>

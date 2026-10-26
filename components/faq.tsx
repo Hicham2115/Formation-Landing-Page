@@ -5,7 +5,7 @@ import { phone } from "@/lib/site";
 const faqs = [
   [
     "À qui s’adresse cette formation ?",
-    "La formation s’adresse aux professionnels de santé, thérapeutes et praticiens souhaitant découvrir la réflexologie auriculaire par bio-stimulation laser.",
+    "Elle s’adresse en priorité aux médecins et professionnels de santé qui souhaitent découvrir l’appareil laser et les protocoles étudiés pour accompagner leurs patients. Elle est aussi ouverte aux thérapeutes, naturopathes, psychothérapeutes, coachs et certains profils en reconversion.",
   ],
   [
     "Quand et où aura lieu la session ?",
@@ -13,11 +13,11 @@ const faqs = [
   ],
   [
     "Quel est le tarif de la journée ?",
-    "Le tarif indiqué dans la brochure est de 22 900 DH HT. Le déjeuner est inclus.",
+    "Le tarif de la journée est de 22 900 DH HT. Le déjeuner est inclus.",
   ],
   [
     "Un appareil laser est-il compris ?",
-    "La brochure annonce un pack professionnel pour vous former et vous équiper, mais ne détaille pas clairement ce qu’il comprend. Contactez l’équipe pour confirmer si l’appareil est inclus dans le tarif.",
+    "Un pack professionnel d’équipement est prévu. Contactez l’équipe pour connaître son contenu exact et confirmer si le stylo laser est inclus dans le tarif.",
   ],
 ];
 

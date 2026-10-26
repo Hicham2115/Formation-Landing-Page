@@ -8,7 +8,7 @@ export default function ScrollReveal() {
       "(prefers-reduced-motion: reduce)",
     );
     const sections = document.querySelectorAll<HTMLElement>(
-      "main > section:not([data-no-reveal]), footer",
+      "main section:not([data-no-reveal]), footer",
     );
 
     if (motionPreference.matches) return;

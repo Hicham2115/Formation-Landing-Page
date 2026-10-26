@@ -20,8 +20,8 @@ export default function Home() {
         <Hero />
         <CourseIntro />
         <CourseDetails />
-        <ImageStory />
         <CourseFacts />
+        <ImageStory />
         <ProgramSection />
         <TrainerSection />
         <CompanyReferences />

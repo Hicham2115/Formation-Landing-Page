@@ -9,11 +9,12 @@ export default function ContactSection() {
         <div className="max-w-3xl">
           <Label>PLACES LIMITÉES</Label>
           <h2 className="text-4xl font-medium leading-[1.02] tracking-[-.065em] sm:text-6xl">
-            Prêt·e à découvrir une nouvelle approche&nbsp;?
+            Prêt·e à découvrir le laser auriculaire&nbsp;?
           </h2>
           <p className="mt-5 max-w-lg text-sm leading-7 text-white/65 sm:text-base">
-            Contactez l’équipe pour connaître les disponibilités de la session
-            du 31 octobre.
+            Cette journée s’adresse en priorité aux médecins et professionnels
+            de santé qui souhaitent explorer cet outil pour accompagner leurs
+            patients. Contactez l’équipe pour connaître les disponibilités.
           </p>
           <a
             className="group mt-8 inline-flex min-h-14 items-center gap-4 rounded-full bg-brand py-2 pl-6 pr-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none"

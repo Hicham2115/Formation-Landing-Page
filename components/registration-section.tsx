@@ -34,7 +34,7 @@ export default function RegistrationSection() {
             <span className="h-px w-5 bg-brand" /> INFORMATIONS PRATIQUES
           </p>
           <h2 className="max-w-lg text-4xl font-medium leading-[1.04] tracking-[-.065em] sm:text-6xl">
-            Une journée pour faire évoluer votre <em className="not-italic text-brand">pratique.</em>
+            Découvrez le laser auriculaire pour votre <em className="not-italic text-brand">pratique.</em>
           </h2>
           <p className="mt-6 max-w-md text-sm leading-7 text-white/70">
             Retrouvez les détails de la session et contactez l’équipe pour
@@ -116,8 +116,7 @@ export default function RegistrationSection() {
               </span>
             </summary>
             <p className="mt-2 text-[10px] leading-5 text-neutral-500">
-              Caractéristiques, conformité et garantie telles qu’indiquées par
-              l’organisateur dans le document fourni.
+              Caractéristiques techniques et garantie de l’appareil.
             </p>
             <dl className="mt-3 grid gap-x-4 text-xs sm:grid-cols-2">
               {laserSpecifications.map(([label, value]) => (
@@ -148,8 +147,8 @@ export default function RegistrationSection() {
             Appeler pour réserver <Phone size={16} />
           </a>
           <p className="mt-4 text-[10px] leading-5 text-neutral-500">
-            *Accréditations annoncées par l’organisateur : IPHM (Royaume-Uni) et
-            CIRET-TP (France). À confirmer auprès de l’organisateur.
+            *Certificat de formation associé à IPHM (Royaume-Uni) et CIRET-TP
+            (France).
           </p>
         </div>
       </section>

@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Formation en réflexologie auriculaire | Addic’s Laser",
+  title: "Formation au laser auriculaire pour médecins | Addic’s Laser",
   description:
-    "Une journée de formation en réflexologie auriculaire par bio-stimulation laser, à Mohammedia le 31 octobre 2026.",
+    "Une journée pour les médecins et professionnels de santé : découvrez la réflexologie auriculaire par bio-stimulation laser, à Mohammedia le 31 octobre 2026.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
