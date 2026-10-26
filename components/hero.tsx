@@ -56,7 +56,7 @@ export default function Hero() {
         </div>
         <div className="group relative min-h-[390px] overflow-hidden motion-safe:animate-[soft-rise_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:120ms] lg:min-h-full">
           <Image
-            src="/images/siham-boulla.jpg"
+            src="/images/siham-boulla-hero.jpg"
             alt="Siham Boulla, formatrice, dans son cabinet"
             fill
             priority
