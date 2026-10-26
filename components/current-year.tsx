@@ -1,5 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function CurrentYear() {
-  return new Date().getFullYear();
+  const [year, setYear] = useState("");
+
+  useEffect(() => {
+    setYear(String(new Date().getFullYear()));
+  }, []);
+
+  return <span>{year}</span>;
 }
