@@ -87,7 +87,7 @@ const modules = [
 ];
 
 export default function ProgramSection() {
-  const [activeModule, setActiveModule] = useState(0);
+  const [activeModule, setActiveModule] = useState(modules.length - 1);
   const active = modules[activeModule];
 
   return (
@@ -174,7 +174,7 @@ export default function ProgramSection() {
               <span className="mb-1 h-px w-10 shrink-0 bg-brand" />
             </div>
           </div>
-          <details className="group border-b border-white/15 py-4">
+          <details className="group border-b border-white/15 py-4" open>
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium marker:hidden [&::-webkit-details-marker]:hidden">
               Contenu du module
               <span className="text-lg text-brand transition-transform group-open:rotate-45">
