@@ -1,10 +1,10 @@
 "use client";
 
 import { ArrowRight, ArrowUpRight, Menu, MessageCircle } from "lucide-react";
+import { useState } from "react";
 import BrandLockup from "@/components/brand-lockup";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -15,8 +15,10 @@ import { navigationLinks } from "@/layout/navigation-links";
 import { phone } from "@/lib/site";
 
 export default function MobileMenu() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         aria-label="Ouvrir le menu"
         className="grid size-11 place-items-center rounded-full border border-divider bg-white transition hover:border-ink hover:bg-ink hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand md:hidden"
@@ -45,14 +47,11 @@ export default function MobileMenu() {
 
           <nav className="px-7 py-5 sm:px-9" aria-label="Navigation mobile">
             {navigationLinks.map((link, index) => (
-              <SheetClose
+              <a
                 key={link.href}
-                render={
-                  <a
-                    href={link.href}
-                    className="group flex min-h-[68px] items-center justify-between border-b border-divider text-[17px] font-medium tracking-[-.02em] transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-                  />
-                }
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="group flex min-h-[68px] items-center justify-between border-b border-divider text-[17px] font-medium tracking-[-.02em] transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <span className="flex items-center gap-4">
                   <span className="font-mono text-[10px] tracking-wide text-neutral-400">
@@ -65,7 +64,7 @@ export default function MobileMenu() {
                   strokeWidth={1.7}
                   className="text-neutral-400 transition-transform group-hover:translate-x-1 group-hover:text-brand"
                 />
-              </SheetClose>
+              </a>
             ))}
           </nav>
 
@@ -73,20 +72,17 @@ export default function MobileMenu() {
             <p className="mb-4 text-xs leading-5 text-neutral-500">
               Prête à vous lancer ? Échangeons sur votre projet.
             </p>
-            <SheetClose
-              render={
-                <a
-                  href="#contact-form"
-                  className="flex min-h-14 items-center justify-between rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
-                />
-              }
+            <a
+              href="#contact-form"
+              onClick={() => setOpen(false)}
+              className="flex min-h-14 items-center justify-between rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             >
               <span className="flex items-center gap-2.5">
                 <MessageCircle size={16} />
                 Nous contacter
               </span>
               <ArrowUpRight size={18} />
-            </SheetClose>
+            </a>
             <p className="mt-4 text-center text-[11px] text-neutral-500">
               <a className="transition hover:text-brand" href={`tel:${phone}`}>
                 +212 6 13 75 51 22

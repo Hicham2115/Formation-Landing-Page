@@ -14,7 +14,7 @@ export default function TrainerSection() {
       className="grid items-center gap-10 border-t border-divider py-16 sm:gap-14 sm:py-24 lg:grid-cols-[.88fr_1.12fr] lg:gap-14"
       id="formatrice"
     >
-      <div className="group relative aspect-[4/4.6] min-h-[440px] overflow-hidden rounded-[24px] bg-secondary sm:min-h-[560px]">
+      <div className="group relative aspect-[4/4.6] overflow-hidden rounded-[24px] bg-secondary">
         <Image
           src="/images/siham-boulla-profile.jpg"
           alt="Portrait de Siham Boulla dans son cabinet"

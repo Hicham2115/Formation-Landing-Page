@@ -15,7 +15,7 @@ export default function RegistrationSection() {
         className="my-20 grid gap-10 rounded-[26px] bg-ink px-6 py-12 text-white sm:my-28 sm:grid-cols-2 sm:items-center sm:gap-14 sm:px-12 sm:py-16 lg:px-16"
         id="inscription"
       >
-        <div>
+        <div className="min-w-0">
           <p className="mb-5 flex items-center gap-2 text-[11px] font-semibold tracking-[.16em] text-white/60">
             <span className="h-px w-5 bg-brand" /> INFORMATIONS PRATIQUES
           </p>
@@ -59,7 +59,7 @@ export default function RegistrationSection() {
             </div>
           </div>
         </div>
-        <div className="rounded-[26px] border-2 border-brand bg-white p-6 sm:p-9 lg:p-10">
+        <div className="min-w-0 rounded-[26px] border-2 border-brand bg-white p-6 sm:p-9 lg:p-10">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <span className="grid size-12 shrink-0 place-items-center rounded-full bg-soft text-brand">

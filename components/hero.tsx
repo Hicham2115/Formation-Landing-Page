@@ -14,8 +14,8 @@ export default function Hero() {
         id="top"
         data-no-reveal
       >
-        <div className="flex flex-col justify-center px-7 py-12 sm:px-12 lg:px-16 lg:py-16">
-          <p className="mb-8 inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/[.04] px-3.5 py-2 text-[9px] font-bold uppercase tracking-[.2em] text-white motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
+        <div className="flex min-w-0 flex-col justify-center px-7 py-12 sm:px-12 lg:px-16 lg:py-16">
+          <p className="mb-8 inline-flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full border border-white/15 bg-white/[.04] px-3.5 py-2 text-[9px] font-bold uppercase tracking-[.12em] text-white sm:gap-2.5 sm:tracking-[.2em] motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
             <span className="size-1.5 rounded-full  bg-brand motion-safe:animate-[pulse-dot_2.2s_ease-in-out_infinite]" />
             Formation pour les professionnels de santé{" "}
             <span className="text-white/30">·</span> Mohammedia
@@ -61,7 +61,7 @@ export default function Hero() {
             </span>
           </div>
         </div>
-        <div className="group relative min-h-[390px] overflow-hidden motion-safe:animate-[soft-rise_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:120ms] lg:min-h-full">
+        <div className="group relative min-h-[390px] min-w-0 overflow-hidden motion-safe:animate-[soft-rise_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:120ms] lg:min-h-full">
           <Image
             src="/images/siham-boulla-hero.jpg"
             alt="Siham Boulla, formatrice, dans son cabinet"

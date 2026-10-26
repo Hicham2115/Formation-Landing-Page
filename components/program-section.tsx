@@ -110,13 +110,17 @@ export default function ProgramSection() {
       </div>
 
       <div className="grid gap-8 pt-5 lg:grid-cols-[minmax(0,1fr)_minmax(250px,0.64fr)] lg:gap-12">
-        <div className="order-2 min-w-0 lg:order-1">
+        <div className="order-1 min-w-0">
           {modules.map((module, index) => (
             <button
               key={module.title}
               type="button"
               aria-pressed={activeModule === index}
-              onMouseEnter={() => setActiveModule(index)}
+              onMouseEnter={() => {
+                if (window.matchMedia("(hover: hover)").matches) {
+                  setActiveModule(index);
+                }
+              }}
               onFocus={() => setActiveModule(index)}
               onClick={() => setActiveModule(index)}
               className={`group grid w-full grid-cols-[38px_1fr_20px] items-center gap-3 border-b border-white/15 py-5 text-left transition-colors sm:grid-cols-[60px_1fr_24px] sm:py-6 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-brand ${
@@ -147,7 +151,7 @@ export default function ProgramSection() {
           ))}
         </div>
 
-        <div className="order-1 min-w-0 lg:sticky lg:top-8 lg:order-2 lg:mt-2 lg:self-start">
+        <div className="order-2 min-w-0 lg:sticky lg:top-8 lg:mt-2 lg:self-start">
           <div
             className="relative min-h-[270px] overflow-hidden rounded-[18px] bg-white/5 sm:min-h-[360px] lg:h-[350px]"
             aria-live="polite"
