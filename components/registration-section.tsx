@@ -1,12 +1,11 @@
 import {
   BadgeCheck,
+  ArrowUpRight,
   CalendarDays,
   Clock3,
   MapPin,
-  Phone,
   Utensils,
 } from "lucide-react";
-import { phone } from "@/lib/site";
 
 export default function RegistrationSection() {
   return (
@@ -73,11 +72,11 @@ export default function RegistrationSection() {
               31 OCTOBRE
             </span>
           </div>
-          <p className="mt-8 text-[clamp(2.5rem,10vw,3.5rem)] font-semibold tracking-[-.07em] text-ink sm:text-6xl lg:text-7xl">
-            22 900 <small className="text-base tracking-normal">DH HT</small>
+          <p className="mt-8 text-2xl font-semibold leading-tight tracking-[-.045em] text-ink sm:text-3xl">
+            Une journée pour enrichir votre pratique
           </p>
           <p className="mt-2 text-[15px] leading-6 text-neutral-600">
-            Tarif de la journée de formation
+            Contactez l’équipe pour les modalités d’inscription.
           </p>
           <ul className="my-7 text-[15px] leading-6 text-ink">
             <li className="flex items-center gap-4 border-t border-divider py-4">
@@ -98,11 +97,14 @@ export default function RegistrationSection() {
               <span>Pack professionnel pour vous former et vous équiper</span>
             </li>
           </ul>
+          <p className="mb-3 text-xs font-semibold tracking-[.08em] text-brand">
+            PLACES LIMITÉES — RÉSERVEZ DÈS MAINTENANT
+          </p>
           <a
             className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:px-9"
-            href={`tel:${phone}`}
+            href="#contact-form"
           >
-            Appeler pour réserver <Phone size={16} />
+            Réserver ma place <ArrowUpRight size={16} />
           </a>
           <p className="mt-4 text-xs leading-5 text-neutral-600">
             *Certificat de formation associé à IPHM (Royaume-Uni) et CIRET-TP

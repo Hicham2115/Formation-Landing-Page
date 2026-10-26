@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-  ArrowDownRight,
   ArrowUpRight,
   CalendarDays,
   MapPin,
@@ -50,10 +49,10 @@ export default function Hero() {
               Réserver ma place <ArrowUpRight size={15} />
             </a>
             <a
-              className="inline-flex items-center gap-2 text-sm  text-white transition hover:text-white/80 duration-300"
-              href="#programme"
+              className="inline-flex items-center gap-2 text-sm text-white transition duration-300 hover:text-white/80"
+              href="#contact-form"
             >
-              Découvrir le programme <ArrowDownRight size={15} />
+              Poser une question <ArrowUpRight size={15} />
             </a>
           </div>
           <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-5 text-sm text-white motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:740ms]">
@@ -98,7 +97,7 @@ export default function Hero() {
           ["FORMAT", "1 journée"],
           ["DATE", "31.10.2026"],
           ["LIEU", "Mohammedia"],
-          ["INVESTISSEMENT", "22 900 DH HT"],
+          ["DÉJEUNER", "Inclus"],
         ].map(([label, value]) => (
           <div className="bg-[#fafafa] px-4 py-5 sm:px-6 sm:py-6" key={label}>
             <span className="flex items-center gap-2 text-[9px] font-semibold tracking-[.16em] text-neutral-500">

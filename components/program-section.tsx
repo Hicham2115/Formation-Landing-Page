@@ -96,7 +96,7 @@ export default function ProgramSection() {
     >
       <div className="grid gap-8 border-b border-white/15 pb-10 sm:grid-cols-2 sm:items-end sm:pb-14">
         <div>
-          <Label>LE PROGRAMME</Label>
+          <Label tone="light">LE PROGRAMME</Label>
           <h2 className="text-5xl font-medium leading-[.96] tracking-[-.07em] sm:text-7xl">
             Du repère
             <br />à la <em className="not-italic text-brand">pratique.</em>

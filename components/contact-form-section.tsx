@@ -1,7 +1,7 @@
 "use client";
 
 import { useForm } from "@tanstack/react-form";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, MapPin, MessageCircle } from "lucide-react";
 import { z } from "zod";
 import Label from "@/components/section-label";
 import { phone } from "@/lib/site";
@@ -57,7 +57,7 @@ export default function ContactFormSection() {
       aria-labelledby="contact-form-title"
     >
       <div className="flex flex-col items-start">
-        <Label>CONTACTEZ-NOUS</Label>
+        <Label tone="light">CONTACTEZ-NOUS</Label>
         <h2
           className="mt-5 max-w-[12ch] text-4xl font-medium leading-[1.02] tracking-[-.065em] sm:text-5xl lg:text-6xl"
           id="contact-form-title"
@@ -209,6 +209,40 @@ export default function ContactFormSection() {
           </button>
         </div>
       </form>
+
+      <div className="overflow-hidden rounded-[22px] border border-white/10 bg-white/[.045] lg:col-span-2">
+        <div className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <div className="flex items-center gap-3">
+            <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand/15 text-brand">
+              <MapPin size={19} />
+            </span>
+            <div>
+              <p className="text-[11px] font-semibold tracking-[.12em] text-white/55">
+                NOUS TROUVER
+              </p>
+              <p className="mt-1 text-sm font-medium text-white">
+                Centre Addic’s Laser · Boulevard Hassan II · Mohammedia
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://www.google.com/maps?q=33.71052551269531,-7.396710395812988&z=17&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white/75 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            Ouvrir dans Google Maps <ArrowUpRight size={16} />
+          </a>
+        </div>
+        <iframe
+          className="h-[300px] w-full border-0 sm:h-[380px] lg:h-[420px]"
+          src="https://maps.google.com/maps?q=33.71052551269531,-7.396710395812988&z=17&output=embed"
+          title="Carte du Centre Addic’s Laser à Mohammedia"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
     </section>
   );
 }

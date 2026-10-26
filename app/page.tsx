@@ -8,6 +8,7 @@ import DeviceOverview from "@/components/device-overview";
 import Faq from "@/components/faq";
 import Hero from "@/components/hero";
 import ImageStory from "@/components/image-story";
+import MidPageCta from "@/components/mid-page-cta";
 import ProgramSection from "@/components/program-section";
 import RegistrationSection from "@/components/registration-section";
 import SiteFooter from "@/components/site-footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <CourseIntro />
         <CourseFacts />
         <CourseDetails />
+        <MidPageCta />
         <ProgramSection />
         <DeviceOverview />
         <ImageStory />

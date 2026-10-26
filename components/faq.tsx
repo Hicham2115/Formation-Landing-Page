@@ -4,19 +4,19 @@ import Label from "@/components/section-label";
 const faqs = [
   [
     "À qui s’adresse cette formation ?",
-    "Elle s’adresse en priorité aux médecins et professionnels de santé qui souhaitent découvrir l’appareil laser et les protocoles étudiés pour accompagner leurs patients. Elle est aussi ouverte aux thérapeutes, naturopathes, psychothérapeutes, coachs et certains profils en reconversion.",
+    "Elle s’adresse en priorité aux médecins et professionnels de santé qui souhaitent découvrir l’appareil laser et les protocoles étudiés pour accompagner leurs patients. Elle est aussi ouverte aux thérapeutes, naturopathes, psychothérapeutes, coachs et certains profils en reconversion. Pour la madérothérapie, les profils concernés sont les masseuses, esthéticiennes, propriétaires de spas ou de centres de beauté, centres d’amincissement, thérapeutes et kinésithérapeutes.",
   ],
   [
     "Quand et où aura lieu la session ?",
     "La session se tient le samedi 31 octobre 2026 à Mohammedia, au Centre Addic’s Laser, Boulevard Hassan II.",
   ],
   [
-    "Quel est le tarif de la journée ?",
-    "Le tarif de la journée est de 22 900 DH HT. Le déjeuner est inclus.",
+    "Que comprend la journée de formation ?",
+    "La journée comprend le déjeuner, un certificat international de praticien·ne en réflexologie auriculaire par bio-stimulation laser et un pack professionnel. Contactez l’équipe pour confirmer les modalités d’inscription et le contenu exact du pack.",
   ],
   [
     "Un appareil laser est-il compris ?",
-    "Un pack professionnel d’équipement est prévu. Contactez l’équipe pour connaître son contenu exact et confirmer si le stylo laser est inclus dans le tarif.",
+    "Un pack professionnel d’équipement est prévu. Contactez l’équipe pour connaître son contenu exact et confirmer si le stylo laser est inclus.",
   ],
 ];
 

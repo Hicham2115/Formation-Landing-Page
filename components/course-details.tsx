@@ -5,6 +5,7 @@ const details = [
     items: [
       "Médecins et professionnels de santé : infirmiers, kinésithérapeutes, orthoptistes et orthophonistes",
       "Aussi ouverte aux thérapeutes, naturopathes, psychothérapeutes, coachs et reconversion Bac+2; institut médical Bac+2 minimum",
+      "Pour la madérothérapie : masseuses, esthéticiennes, propriétaires de spas ou de centres de beauté, centres d’amincissement, thérapeutes et kinésithérapeutes",
     ],
   },
   {
