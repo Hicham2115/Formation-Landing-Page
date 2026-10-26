@@ -51,25 +51,24 @@ export default function TrainerSection() {
         <div className="mt-7 max-w-2xl space-y-4 text-base leading-7 text-ink sm:mt-8 sm:text-[17px] sm:leading-8">
           <p>
             Psychothérapeute, formatrice et fondatrice de Full International
-            Academy, Siham Boulla anime cette journée consacrée à la réflexologie
-            auriculaire et à la bio-stimulation laser.
+            Academy, Siham Boulla anime cette journée autour de la réflexologie
+            auriculaire et de la bio-stimulation laser. La brochure souligne
+            son expérience des approches intégratives.
           </p>
           <p>
-            Son parcours comprend près de 22 ans d’expérience en communication
-            globale, relations presse et digital, sur les marchés français,
-            monégasque et marocain, auprès de secteurs comme la santé,
-            l’automobile, les cosmétiques et l’assurance.
+            Forte de près de 22 ans d’expérience en communication, relations
+            presse et digital, elle a travaillé en France, à Monaco et au Maroc,
+            notamment dans la santé, l’automobile, les cosmétiques et
+            l’assurance. Elle a fondé ENIA, dédiée à la communication 360° et
+            aux relations presse, puis FULLMARKET, spécialisée dans le digital,
+            le marketing et la régie publicitaire.
           </p>
           <p>
-            Elle a fondé ENIA, agence de communication 360° et de relations
-            presse, puis FULLMARKET, spécialisée dans le digital, le marketing
-            et la régie publicitaire. Diplômée en communication marketing, elle
-            est également diplômée en magnétisme, sophrologie et EFT.
-          </p>
-          <p>
-            Pendant la formation, elle guide les participants des repères
-            anatomiques au repérage des points neuro-réflexes, puis aux
-            protocoles abordés pour les addictions et les états émotionnels.
+            Diplômée en communication marketing à Paris, elle est aussi formée
+            en magnétisme, sophrologie et EFT, avec des certifications en
+            publicité médicale et webmarketing. Pendant la formation, elle
+            accompagne les participants des repères anatomiques au repérage
+            des points et à la découverte des protocoles présentés.
           </p>
         </div>
 

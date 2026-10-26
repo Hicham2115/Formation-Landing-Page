@@ -17,7 +17,7 @@ const faqs = [
   ],
   [
     "Un appareil laser est-il compris ?",
-    "La brochure présente les caractéristiques de l’appareil, mais ne précise pas si celui-ci est inclus dans le tarif. Contactez l’équipe pour confirmation.",
+    "La brochure annonce un pack professionnel pour vous former et vous équiper, mais ne détaille pas clairement ce qu’il comprend. Contactez l’équipe pour confirmer si l’appareil est inclus dans le tarif.",
   ],
 ];
 

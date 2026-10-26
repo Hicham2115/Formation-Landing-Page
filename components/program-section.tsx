@@ -12,42 +12,77 @@ const modules = [
     image: "/images/programme-introduction.jpg",
     alt: "Atelier d’introduction autour d’un grand schéma de l’oreille",
     caption: "Découvrir la méthode",
+    topics: [
+      "Objectifs de la formation",
+      "Place de l’auriculothérapie laser dans les thérapies complémentaires",
+    ],
   },
   {
     title: "Histoire et définition de la méthode",
     image: "/images/programme-histoire.jpg",
     alt: "Atlas ancien illustrant l’oreille et carnet de notes",
     caption: "Comprendre ses repères",
+    topics: [
+      "Histoire et origines",
+      "Définition et principes généraux",
+      "Différences entre auriculothérapie, acupuncture et auriculomédecine",
+      "Données scientifiques et efficacité abordées dans la brochure",
+    ],
   },
   {
     title: "Anatomie de l’oreille",
     image: "/images/programme-anatomie.jpg",
     alt: "Modèle anatomique détaillé de l’oreille",
     caption: "Observer l’oreille",
+    topics: [
+      "Généralités et reliefs anatomiques : hélix, anti-hélix, conque et tragus",
+      "Muscles, téguments et vascularisation",
+      "Innervation auriculaire",
+    ],
   },
   {
     title: "Système nerveux et points réflexes",
     image: "/images/programme-systeme-nerveux.jpg",
     alt: "Modèle pédagogique de la tête et du système nerveux",
     caption: "Relier les points réflexes",
+    topics: [
+      "Systèmes nerveux central, périphérique et végétatif",
+      "Rôle spécifique du nerf vague",
+    ],
   },
   {
     title: "Repérage des points neuro-réflexes",
     image: "/images/programme-points-reflexes.jpg",
     alt: "Formatrice indiquant des repères sur un schéma auriculaire",
     caption: "Repérer les zones",
+    topics: [
+      "Types de points : organiques, fonctionnels et émotionnels",
+      "Somatotopie auriculaire et embryon inversé de Nogier",
+      "Localisations générales, points maîtres et points de fonction",
+      "Exemples présentés : Shen Men, Sympathique et Endorphines",
+    ],
   },
   {
     title: "Utilisation de la bio-stimulation laser",
     image: "/images/programme-laser.jpg",
     alt: "Appareil laser posé près d’un schéma de l’oreille",
     caption: "Voir le geste",
+    topics: [
+      "Principes de traitement et régulation naturelle",
+      "Moyens présentés : aiguilles, ASP, magrains, massage, placture, sparadraps et laser",
+      "Précautions, contre-indications, obstacles et réactions possibles après séance",
+    ],
   },
   {
     title: "Protocoles : addictions et états émotionnels",
     image: "/images/programme-protocoles.jpg",
     alt: "Petit groupe échangeant autour de fiches de travail et d’un schéma",
     caption: "Explorer les protocoles",
+    topics: [
+      "Exemples : sevrage tabagique, alcool, cannabis et alimentation compulsive",
+      "Anxiété, dépression et stress",
+      "Démonstration, pratique, débrief collectif et présentation du test laser",
+    ],
   },
 ];
 
@@ -113,30 +148,48 @@ export default function ProgramSection() {
           ))}
         </div>
 
-        <div
-          className="relative order-1 min-h-[270px] overflow-hidden rounded-[18px] bg-white/5 sm:min-h-[360px] lg:order-2 lg:sticky lg:top-8 lg:mt-2 lg:h-[430px]"
-          aria-live="polite"
-          aria-label={`Aperçu : ${active.title}`}
-        >
-          <Image
-            key={active.image + activeModule}
-            src={active.image}
-            alt={active.alt}
-            fill
-            priority
-            sizes="(min-width: 1024px) 34vw, 100vw"
-            className="animate-[soft-rise_300ms_ease-out] object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/5" />
-          <span className="absolute left-4 top-4 rounded-full border border-white/35 bg-black/25 px-3 py-1.5 text-[10px] tracking-[.14em] text-white/90 backdrop-blur-sm">
-            MODULE 0{activeModule + 1}
-          </span>
-          <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 sm:p-6">
-            <p className="max-w-[15rem] text-xl leading-tight tracking-[-.04em] sm:text-2xl">
-              {active.caption}
-            </p>
-            <span className="mb-1 h-px w-10 shrink-0 bg-brand" />
+        <div className="order-1 min-w-0 lg:sticky lg:top-8 lg:order-2 lg:mt-2 lg:self-start">
+          <div
+            className="relative min-h-[270px] overflow-hidden rounded-[18px] bg-white/5 sm:min-h-[360px] lg:h-[350px]"
+            aria-live="polite"
+            aria-label={`Aperçu : ${active.title}`}
+          >
+            <Image
+              key={active.image + activeModule}
+              src={active.image}
+              alt={active.alt}
+              fill
+              priority
+              sizes="(min-width: 1024px) 34vw, 100vw"
+              className="animate-[soft-rise_300ms_ease-out] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/5" />
+            <span className="absolute left-4 top-4 rounded-full border border-white/35 bg-black/25 px-3 py-1.5 text-[10px] tracking-[.14em] text-white/90 backdrop-blur-sm">
+              MODULE 0{activeModule + 1}
+            </span>
+            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 sm:p-6">
+              <p className="max-w-[15rem] text-xl leading-tight tracking-[-.04em] sm:text-2xl">
+                {active.caption}
+              </p>
+              <span className="mb-1 h-px w-10 shrink-0 bg-brand" />
+            </div>
           </div>
+          <details className="group border-b border-white/15 py-4">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium marker:hidden [&::-webkit-details-marker]:hidden">
+              Contenu du module
+              <span className="text-lg text-brand transition-transform group-open:rotate-45">
+                +
+              </span>
+            </summary>
+            <ul className="mt-3 space-y-2 text-sm leading-6 text-white/65">
+              {active.topics.map((topic) => (
+                <li className="flex gap-2.5" key={topic}>
+                  <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-brand" />
+                  {topic}
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import ContactSection from "@/components/contact-section";
 import CompanyReferences from "@/components/company-references";
 import CourseFacts from "@/components/course-facts";
+import CourseDetails from "@/components/course-details";
 import CourseIntro from "@/components/course-intro";
 import Faq from "@/components/faq";
 import Hero from "@/components/hero";
@@ -18,6 +19,7 @@ export default function Home() {
       <main>
         <Hero />
         <CourseIntro />
+        <CourseDetails />
         <ImageStory />
         <CourseFacts />
         <ProgramSection />
