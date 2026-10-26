@@ -56,12 +56,8 @@ export default function TrainerSection() {
             psychothérapie, formation et approches intégratives.
           </p>
           <p>
-            Forte de près de 22 ans d’expérience en communication, relations
-            presse et digital, elle a travaillé en France, à Monaco et au Maroc,
-            notamment dans la santé, l’automobile, les cosmétiques et
-            l’assurance. Elle a fondé ENIA, dédiée à la communication 360° et
-            aux relations presse, puis FULLMARKET, spécialisée dans le digital,
-            le marketing et la régie publicitaire.
+            Elle a également près de 22 ans d’expérience en communication,
+            relations presse et digital, en France, à Monaco et au Maroc.
           </p>
           <p>
             Diplômée en communication marketing à Paris, elle est aussi formée

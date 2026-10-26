@@ -1,11 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
+import { SPOTS_LEFT } from "@/lib/site";
 
 export default function MidPageCta() {
   return (
     <aside className="my-10 flex flex-col gap-5 rounded-[22px] bg-secondary px-5 py-6 sm:my-14 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-7">
       <div>
         <p className="text-[11px] font-semibold tracking-[.14em] text-brand">
-          PLACES LIMITÉES
+          PLUS QUE {SPOTS_LEFT} PLACES
         </p>
         <p className="mt-2 max-w-xl text-[15px] leading-6 text-ink sm:text-base">
           Réservez votre place dès maintenant en contactant notre équipe.

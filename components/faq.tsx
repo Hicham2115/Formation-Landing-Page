@@ -3,20 +3,32 @@ import Label from "@/components/section-label";
 
 const faqs = [
   [
-    "À qui s’adresse cette formation ?",
-    "Elle s’adresse en priorité aux médecins et professionnels de santé qui souhaitent découvrir l’appareil laser et les protocoles étudiés pour accompagner leurs patients. Elle est aussi ouverte aux thérapeutes, naturopathes, psychothérapeutes, coachs et certains profils en reconversion. Pour la madérothérapie, les profils concernés sont les masseuses, esthéticiennes, propriétaires de spas ou de centres de beauté, centres d’amincissement, thérapeutes et kinésithérapeutes.",
+    "Le laser est-il compris ?",
+    "Oui. Le tarif de 22 900 DH HT comprend la formation (3 000 DH HT) et le laser professionnel (19 900 DH HT), garanti 2 ans.",
+  ],
+  [
+    "Puis-je suivre la formation sans acheter le laser ?",
+    "Contactez l’équipe pour confirmer les conditions de participation sans achat de l’appareil.",
+  ],
+  [
+    "En combien de temps l’investissement est-il amorti ?",
+    "Cela dépend de votre tarif et de votre volume. Utilisez notre simulateur de rentabilité pour obtenir une estimation indicative.",
+  ],
+  [
+    "Comment se passe le paiement ?",
+    "Contactez l’équipe pour connaître les modalités de paiement.",
+  ],
+  [
+    "Que se passe-t-il après la formation ?",
+    "La formation comprend une supervision, un suivi et un accès au réseau professionnel. Contactez l’équipe pour connaître les modalités de cet accompagnement.",
+  ],
+  [
+    "Qui peut s’inscrire ?",
+    "La formation s’adresse en priorité aux médecins et professionnels de santé. Elle est aussi ouverte aux thérapeutes, naturopathes, psychothérapeutes, coachs et certains profils en reconversion. Les profils de la madérothérapie peuvent aussi se renseigner : masseuses, esthéticiennes, propriétaires de spa ou de centre de beauté et centres d’amincissement.",
   ],
   [
     "Quand et où aura lieu la session ?",
     "La session se tient le samedi 31 octobre 2026 à Mohammedia, au Centre Addic’s Laser, Boulevard Hassan II.",
-  ],
-  [
-    "Que comprend la journée de formation ?",
-    "La journée comprend le déjeuner, un certificat international de praticien·ne en réflexologie auriculaire par bio-stimulation laser et un pack professionnel. Contactez l’équipe pour confirmer les modalités d’inscription et le contenu exact du pack.",
-  ],
-  [
-    "Un appareil laser est-il compris ?",
-    "Un pack professionnel d’équipement est prévu. Contactez l’équipe pour connaître son contenu exact et confirmer si le stylo laser est inclus.",
   ],
 ];
 

@@ -5,13 +5,12 @@ const specifications = [
   ["Puissance nominale de sortie", "50 mW ± 10 %"],
   ["Puissance absorbée", "360 mW"],
   ["Longueur d’onde", "675 à 695 nm"],
-  ["Densité de puissance", "Environ 1 J/cm²"],
   ["Tension", "4,5 V DC"],
   ["Alimentation", "3 piles alcalines AAA de 1,5 V (LR03)"],
   ["Fonctionnement", "Continu, arrêt par bouton-poussoir"],
   ["Tête", "Acier inoxydable sans nickel"],
   ["Tube", "Aluminium anodisé"],
-  ["Normes", "EN 60601 · EN 60825 · EN 40411 · EN 980 · EN 14971"],
+  ["Normes", "EN 60601 · EN 60825 · EN ISO 14971"],
   ["Garantie", "2 ans à compter de la date d’achat"],
 ];
 

@@ -6,6 +6,7 @@ import {
   MapPin,
   Utensils,
 } from "lucide-react";
+import { COURSE_PRICE, SPOTS_LEFT } from "@/lib/site";
 
 export default function RegistrationSection() {
   return (
@@ -16,14 +17,14 @@ export default function RegistrationSection() {
       >
         <div className="min-w-0">
           <p className="mb-5 flex items-center gap-2 text-[11px] font-semibold tracking-[.16em] text-white/60">
-            <span className="h-px w-5 bg-brand" /> INFORMATIONS PRATIQUES
+            <span className="h-px w-5 bg-brand" /> SESSION DU 31 OCTOBRE
           </p>
           <h2 className="max-w-lg text-4xl font-medium leading-[1.04] tracking-[-.065em] sm:text-6xl">
-            Découvrez le laser auriculaire pour votre <em className="not-italic text-brand">pratique.</em>
+            Intégrez le laser auriculaire à votre cabinet.
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-7 text-white/75">
-            Retrouvez les détails de la session et contactez l’équipe pour
-            confirmer votre inscription et les modalités.
+            Une journée de formation professionnelle à Mohammedia, le samedi 31
+            octobre 2026.
           </p>
           <div className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
             <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/5 p-4">
@@ -65,40 +66,43 @@ export default function RegistrationSection() {
                 <CalendarDays size={20} strokeWidth={1.7} />
               </span>
               <span className="text-sm font-semibold tracking-[-.02em] text-ink sm:text-base">
-                SESSION DE FORMATION
+                VOTRE INVESTISSEMENT
               </span>
             </div>
             <span className="rounded-xl bg-brand px-3 py-2 text-[10px] font-semibold tracking-[.08em] text-white sm:text-xs">
               31 OCTOBRE
             </span>
           </div>
-          <p className="mt-8 text-2xl font-semibold leading-tight tracking-[-.045em] text-ink sm:text-3xl">
-            Une journée pour enrichir votre pratique
+          <div className="mt-7 space-y-0 text-sm text-ink">
+            <div className="flex items-start justify-between gap-4 border-t border-divider py-4">
+              <span className="max-w-[72%] leading-6">Formation · 1 journée, déjeuner, certificat international, supervision et suivi</span>
+              <strong className="shrink-0">3 000 DH HT</strong>
+            </div>
+            <div className="flex items-start justify-between gap-4 border-t border-divider py-4">
+              <span className="max-w-[72%] leading-6">Laser professionnel classe 3R · garantie 2 ans</span>
+              <strong className="shrink-0">19 900 DH HT</strong>
+            </div>
+            <div className="flex items-center justify-between gap-4 border-y-2 border-ink py-4 text-base">
+              <strong>TOTAL</strong>
+              <strong>{new Intl.NumberFormat("fr-MA").format(COURSE_PRICE)} DH HT</strong>
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-neutral-600">
+            Le laser vous appartient et reste dans votre cabinet.
           </p>
-          <p className="mt-2 text-[15px] leading-6 text-neutral-600">
-            Contactez l’équipe pour les modalités d’inscription.
-          </p>
-          <ul className="my-7 text-[15px] leading-6 text-ink">
-            <li className="flex items-center gap-4 border-t border-divider py-4">
-              <Clock3 size={20} strokeWidth={1.7} /> Formation sur une journée
+          <ul className="my-6 space-y-3 text-sm leading-6 text-ink">
+            <li className="flex items-center gap-3">
+              <Clock3 size={18} strokeWidth={1.7} /> Formation sur une journée
             </li>
-            <li className="flex items-center gap-4 border-t border-divider py-4">
-              <Utensils size={20} strokeWidth={1.7} /> Déjeuner inclus
+            <li className="flex items-center gap-3">
+              <Utensils size={18} strokeWidth={1.7} /> Déjeuner inclus
             </li>
-            <li className="flex items-center gap-4 border-y border-divider py-4">
-              <BadgeCheck size={20} strokeWidth={1.7} />
-              <span>
-                Certificat international de praticien·ne en réflexologie
-                auriculaire par bio-stimulation laser*
-              </span>
-            </li>
-            <li className="flex items-center gap-4 border-b border-divider py-4">
-              <BadgeCheck size={20} strokeWidth={1.7} />
-              <span>Pack professionnel pour vous former et vous équiper</span>
+            <li className="flex items-center gap-3">
+              <BadgeCheck size={18} strokeWidth={1.7} /> Certificat international de praticien·ne*
             </li>
           </ul>
           <p className="mb-3 text-xs font-semibold tracking-[.08em] text-brand">
-            PLACES LIMITÉES — RÉSERVEZ DÈS MAINTENANT
+            PLUS QUE {SPOTS_LEFT} PLACES
           </p>
           <a
             className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:px-9"

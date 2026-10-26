@@ -77,15 +77,15 @@ export default function CompanyReferences() {
 
   return (
     <section
-      aria-label="Références professionnelles de Siham Boulla"
+      aria-label="Entreprises accompagnées en communication par Siham Boulla"
       className="overflow-hidden border-y border-dashed border-divider py-6 sm:py-8"
     >
       <div className="grid items-center gap-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-10">
         <div>
-          <Label>QUELQUES RÉFÉRENCES</Label>
+          <Label>ENTREPRISES ACCOMPAGNÉES EN COMMUNICATION</Label>
           <p className="max-w-[260px] text-sm leading-6 text-black">
-            18 références professionnelles, dans des secteurs variés de la santé
-            à l’industrie et aux services.
+            Quelques organisations accompagnées en communication et relations
+            presse au fil de son parcours.
           </p>
         </div>
         <div className="min-w-0">

@@ -22,9 +22,8 @@ export default function CourseIntro() {
 
       <div className="flex flex-col items-start lg:items-end lg:pb-2 lg:text-right">
         <p className="max-w-md text-base leading-7 text-neutral-600 sm:text-lg">
-          Une journée pour les médecins et professionnels de santé qui
-          souhaitent découvrir les bases de l’auriculothérapie et de la
-          bio-stimulation laser.
+          Une journée pour ajouter à votre cabinet une approche sans aiguilles
+          et un nouvel outil professionnel pour accompagner vos patients.
         </p>
         <a
           className="group mt-6 inline-flex items-center gap-3 text-sm font-semibold tracking-[-.02em] transition-colors hover:text-brand"

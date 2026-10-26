@@ -1,104 +1,35 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import { Plus } from "lucide-react";
 
 const facts = [
   {
-    target: 1,
-    format: (value: number) => String(Math.round(value)).padStart(2, "0"),
-    accessibleValue: "01",
+    value: "1",
+    accessibleValue: "1",
     unit: "",
     title: "Journée de formation",
     detail: "Un format intensif pour découvrir la méthode étape par étape.",
   },
   {
-    target: 7,
-    format: (value: number) => String(Math.round(value)).padStart(2, "0"),
-    accessibleValue: "07",
+    value: "7",
+    accessibleValue: "7",
     unit: "",
     title: "Modules progressifs",
     detail: "Des bases théoriques jusqu’aux protocoles présentés.",
   },
   {
-    target: 695,
-    format: (value: number) => `${Math.round((value * 675) / 695)}–${Math.round(value)}`,
+    value: "675–695",
     accessibleValue: "675–695 nm",
     unit: "nm",
     title: "Longueur d’onde",
     detail: "Plage de longueur d’onde de l’appareil laser.",
   },
   {
-    target: 2,
-    format: (value: number) => String(Math.round(value)),
+    value: "2",
     accessibleValue: "2 ans",
     unit: "ans",
     title: "Garantie de l’appareil",
     detail: "Garantie de l’appareil à compter de la date d’achat.",
   },
 ];
-
-function CountUp({
-  target,
-  format,
-}: {
-  target: number;
-  format: (value: number) => string;
-}) {
-  const [progress, setProgress] = useState(0);
-  const elementRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const element = elementRef.current;
-    if (!element) return;
-
-    let animationFrame = 0;
-    let startedAt: number | undefined;
-    let cancelled = false;
-    let observer: IntersectionObserver | undefined;
-
-    const animate = (time: number) => {
-      if (cancelled) return;
-      startedAt ??= time;
-      const elapsed = Math.min((time - startedAt) / 1100, 1);
-      const eased = 1 - (1 - elapsed) ** 3;
-      setProgress(eased);
-
-      if (elapsed < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    const start = () => {
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      animationFrame = requestAnimationFrame(() => setProgress(1));
-    } else if ("IntersectionObserver" in window) {
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            observer?.disconnect();
-            start();
-          }
-        },
-        { threshold: 0.35 },
-      );
-      observer.observe(element);
-    } else {
-      start();
-    }
-
-    return () => {
-      cancelled = true;
-      observer?.disconnect();
-      cancelAnimationFrame(animationFrame);
-    };
-  }, []);
-
-  return <span ref={elementRef}>{format(target * progress)}</span>;
-}
 
 export default function CourseFacts() {
   return (
@@ -125,7 +56,7 @@ export default function CourseFacts() {
                     : "text-[clamp(3rem,7vw,7rem)]"
                 }`}
               >
-                <CountUp target={fact.target} format={fact.format} />
+                {fact.value}
                 {fact.unit && (
                   <span className="ml-1 inline-block align-baseline text-[.38em] font-medium tracking-[-.04em]">
                     {fact.unit}

@@ -1,22 +1,27 @@
 "use client";
 
 import { useForm } from "@tanstack/react-form";
-import { ArrowUpRight, MapPin, MessageCircle } from "lucide-react";
-import { z } from "zod";
+import { AlertCircle, ArrowUpRight, CheckCircle2, MapPin, Phone, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import Label from "@/components/section-label";
-import { phone } from "@/lib/site";
-
-const nameSchema = z.string().trim().min(2, "Indiquez votre nom.").max(100);
-const emailSchema = z.string().trim().email("Adresse e-mail invalide.").max(254);
-const professionSchema = z.string().trim().min(2, "Indiquez votre profession.").max(100);
-const messageSchema = z.string().trim().min(10, "Votre message doit contenir au moins 10 caractères.").max(2000);
-
-const contactSchema = z.object({
-  name: nameSchema,
-  email: emailSchema,
-  profession: professionSchema,
-  message: messageSchema,
-});
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import { BOOKING_MESSAGE, phone } from "@/lib/site";
+import { trackConversion } from "@/lib/analytics";
+import {
+  citySchema,
+  leadSchema,
+  nameSchema,
+  optionalEmailSchema,
+  organizationSchema,
+  phoneSchema,
+  professionSchema,
+} from "@/lib/lead-schema";
 
 const fieldClassName =
   "mt-2 min-h-12 w-full rounded-xl border border-white/15 bg-white/[.06] px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-brand focus:ring-2 focus:ring-brand/25";
@@ -28,25 +33,77 @@ function FieldError({ errors }: { errors: Array<string | undefined> }) {
 }
 
 export default function ContactFormSection() {
+  const [confirmation, setConfirmation] = useState<{
+    whatsappUrl: string;
+    waitingList: boolean;
+  } | null>(null);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (!toastMessage) return;
+    const timeout = window.setTimeout(() => setToastMessage(null), 6000);
+    return () => window.clearTimeout(timeout);
+  }, [toastMessage]);
+
   const form = useForm({
-    defaultValues: { name: "", email: "", profession: "", message: "" },
+    defaultValues: {
+      name: "",
+      profession: "",
+      city: "",
+      organization: "",
+      whatsapp: "",
+      email: "",
+    },
     onSubmit: async ({ value }) => {
-      const result = contactSchema.safeParse(value);
-      if (!result.success) return;
+      const waitingList = new URLSearchParams(window.location.search).get("intent") === "waitlist";
+      const parsedLead = leadSchema.safeParse({
+        ...value,
+        intent: waitingList ? "waitlist" : "booking",
+      });
+      if (!parsedLead.success) return;
+
+      setToastMessage(null);
+      setIsSubmitting(true);
+      try {
+        const response = await fetch("/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(parsedLead.data),
+        });
+        const payload = (await response.json().catch(() => ({}))) as { error?: string };
+        if (!response.ok) {
+          throw new Error(payload.error ?? "Impossible d’enregistrer votre demande.");
+        }
+      } catch (error) {
+        setToastMessage(
+          error instanceof Error && error.message !== "Failed to fetch"
+            ? error.message
+            : "Votre demande n’a pas pu être enregistrée. Vérifiez votre connexion puis réessayez.",
+        );
+        return;
+      } finally {
+        setIsSubmitting(false);
+      }
 
       const message = [
-        "Bonjour, je souhaite des informations sur la formation au laser auriculaire.",
+        waitingList
+          ? "Bonjour, je souhaite être inscrit·e sur la liste d’attente de la prochaine session de formation laser auriculaire."
+          : BOOKING_MESSAGE,
         "",
-        `Nom : ${result.data.name}`,
-        `E-mail : ${result.data.email}`,
-        `Profession : ${result.data.profession}`,
-        "",
-        result.data.message,
+        `Nom : ${parsedLead.data.name}`,
+        `Profession : ${parsedLead.data.profession}`,
+        `Ville : ${parsedLead.data.city}`,
+        `Cabinet / centre : ${parsedLead.data.organization}`,
+        `Téléphone WhatsApp : ${parsedLead.data.whatsapp}`,
+        ...(parsedLead.data.email ? [`E-mail : ${parsedLead.data.email}`] : []),
       ].join("\n");
       const whatsappNumber = phone.replace(/\D/g, "");
-      window.location.assign(
-        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
-      );
+      void trackConversion("form_submit");
+      setConfirmation({
+        whatsappUrl: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+        waitingList,
+      });
     },
   });
 
@@ -72,7 +129,7 @@ export default function ContactFormSection() {
           href={`tel:${phone}`}
           className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-white transition hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
         >
-          <MessageCircle size={17} className="text-brand" />
+          <Phone size={17} className="text-brand" />
           Ou appelez le +212 613 755 122
         </a>
       </div>
@@ -96,13 +153,14 @@ export default function ContactFormSection() {
             {(field) => (
               <div>
                 <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
-                  Nom complet
+                  Nom complet <span className="text-brand">*</span>
                 </label>
                 <input
                   className={fieldClassName}
                   id={field.name}
                   name={field.name}
                   autoComplete="name"
+                  required
                   value={field.state.value}
                   onBlur={field.handleBlur}
                   onChange={(event) => field.handleChange(event.target.value)}
@@ -115,15 +173,127 @@ export default function ContactFormSection() {
           </form.Field>
 
           <form.Field
-            name="email"
+            name="profession"
             validators={{
-              onSubmit: ({ value }) => emailSchema.safeParse(value).success ? undefined : "Saisissez une adresse e-mail valide.",
+              onSubmit: ({ value }) => professionSchema.safeParse(value).success ? undefined : "Indiquez votre profession.",
+            }}
+          >
+            {(field) => (
+              <div className="sm:col-span-2">
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                  Profession <span className="text-brand">*</span>
+                </label>
+                <input
+                  className={fieldClassName}
+                  id={field.name}
+                  name={field.name}
+                  autoComplete="organization-title"
+                  required
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                  placeholder="Ex. médecin, infirmier·ère, kinésithérapeute…"
+                  aria-invalid={field.state.meta.errors.length > 0}
+                />
+                <FieldError errors={field.state.meta.errors} />
+              </div>
+            )}
+          </form.Field>
+
+          <form.Field
+            name="city"
+            validators={{
+              onSubmit: ({ value }) => citySchema.safeParse(value).success ? undefined : "Indiquez votre ville.",
             }}
           >
             {(field) => (
               <div>
                 <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
-                  Adresse e-mail
+                  Ville <span className="text-brand">*</span>
+                </label>
+                <input
+                  className={fieldClassName}
+                  id={field.name}
+                  name={field.name}
+                  required
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                  placeholder="Votre ville"
+                  aria-invalid={field.state.meta.errors.length > 0}
+                />
+                <FieldError errors={field.state.meta.errors} />
+              </div>
+            )}
+          </form.Field>
+
+          <form.Field
+            name="organization"
+            validators={{
+              onSubmit: ({ value }) => organizationSchema.safeParse(value).success ? undefined : "Indiquez votre cabinet ou centre.",
+            }}
+          >
+            {(field) => (
+              <div>
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                  Cabinet / centre <span className="text-brand">*</span>
+                </label>
+                <input
+                  className={fieldClassName}
+                  id={field.name}
+                  name={field.name}
+                  autoComplete="organization"
+                  required
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                  placeholder="Nom de votre structure"
+                  aria-invalid={field.state.meta.errors.length > 0}
+                />
+                <FieldError errors={field.state.meta.errors} />
+              </div>
+            )}
+          </form.Field>
+
+          <form.Field
+            name="whatsapp"
+            validators={{
+              onSubmit: ({ value }) => phoneSchema.safeParse(value).success ? undefined : "Indiquez un numéro WhatsApp valide.",
+            }}
+          >
+            {(field) => (
+              <div>
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                  Téléphone WhatsApp <span className="text-brand">*</span>
+                </label>
+                <input
+                  className={fieldClassName}
+                  id={field.name}
+                  name={field.name}
+                  type="tel"
+                  autoComplete="tel"
+                  required
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                  placeholder="+212 6 00 00 00 00"
+                  aria-invalid={field.state.meta.errors.length > 0}
+                />
+                <FieldError errors={field.state.meta.errors} />
+              </div>
+            )}
+          </form.Field>
+
+          <form.Field
+            name="email"
+            validators={{
+              onSubmit: ({ value }) => optionalEmailSchema.safeParse(value).success ? undefined : "Saisissez une adresse e-mail valide.",
+            }}
+          >
+            {(field) => (
+              <div>
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                  Adresse e-mail <span className="text-white/45">(facultatif)</span>
                 </label>
                 <input
                   className={fieldClassName}
@@ -141,74 +311,85 @@ export default function ContactFormSection() {
               </div>
             )}
           </form.Field>
-
-          <form.Field
-            name="profession"
-            validators={{
-              onSubmit: ({ value }) => professionSchema.safeParse(value).success ? undefined : "Indiquez votre profession.",
-            }}
-          >
-            {(field) => (
-              <div className="sm:col-span-2">
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
-                  Profession
-                </label>
-                <input
-                  className={fieldClassName}
-                  id={field.name}
-                  name={field.name}
-                  autoComplete="organization-title"
-                  value={field.state.value}
-                  onBlur={field.handleBlur}
-                  onChange={(event) => field.handleChange(event.target.value)}
-                  placeholder="Ex. médecin, infirmier·ère, kinésithérapeute…"
-                  aria-invalid={field.state.meta.errors.length > 0}
-                />
-                <FieldError errors={field.state.meta.errors} />
-              </div>
-            )}
-          </form.Field>
-
-          <form.Field
-            name="message"
-            validators={{
-              onSubmit: ({ value }) => messageSchema.safeParse(value).success ? undefined : "Ajoutez un message d’au moins 10 caractères.",
-            }}
-          >
-            {(field) => (
-              <div className="sm:col-span-2">
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
-                  Votre question
-                </label>
-                <textarea
-                  className={`${fieldClassName} min-h-32 resize-y`}
-                  id={field.name}
-                  name={field.name}
-                  value={field.state.value}
-                  onBlur={field.handleBlur}
-                  onChange={(event) => field.handleChange(event.target.value)}
-                  placeholder="Dites-nous ce que vous souhaitez savoir…"
-                  aria-invalid={field.state.meta.errors.length > 0}
-                  rows={4}
-                />
-                <FieldError errors={field.state.meta.errors} />
-              </div>
-            )}
-          </form.Field>
         </div>
 
         <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-sm text-[13px] leading-5 text-white/60">
-            Le message s’ouvrira dans WhatsApp pour être envoyé à l’équipe.
+            Un conseiller vous contacte sur WhatsApp pour confirmer votre place et les modalités de paiement.
           </p>
           <button
             className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-white hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             type="submit"
+            disabled={isSubmitting}
           >
-            Envoyer ma question <ArrowUpRight size={16} />
+            {isSubmitting ? "Enregistrement…" : "Réserver ma place"} <ArrowUpRight size={16} />
           </button>
         </div>
       </form>
+
+      {toastMessage && (
+        <div
+          className="fixed bottom-4 right-4 z-[70] flex w-[min(92vw,25rem)] items-start gap-3 rounded-2xl border border-[#ffaaa5]/25 bg-[#211514]/95 p-4 text-white shadow-[0_18px_60px_rgba(0,0,0,.38)] backdrop-blur-xl sm:bottom-6 sm:right-6"
+          role="alert"
+          aria-live="assertive"
+        >
+          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#ffaaa5]/10 text-[#ffaaa5]">
+            <AlertCircle size={19} aria-hidden="true" />
+          </span>
+          <div className="min-w-0 flex-1 pt-0.5">
+            <p className="text-sm font-semibold tracking-[-.01em]">Enregistrement impossible</p>
+            <p className="mt-1 text-[13px] leading-5 text-white/70">{toastMessage}</p>
+          </div>
+          <button
+            className="-mr-1 -mt-1 grid size-8 shrink-0 place-items-center rounded-full text-white/55 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+            type="button"
+            aria-label="Fermer le message d’erreur"
+            onClick={() => setToastMessage(null)}
+          >
+            <X size={16} />
+          </button>
+        </div>
+      )}
+
+      <Sheet
+        open={confirmation !== null}
+        onOpenChange={(open) => {
+          if (!open) setConfirmation(null);
+        }}
+      >
+        <SheetContent
+          side="bottom"
+          showCloseButton
+          className="inset-x-0 bottom-0 top-auto max-h-[90dvh] overflow-y-auto rounded-t-[28px] border border-white/10 bg-ink p-6 text-white sm:inset-auto sm:left-1/2 sm:top-1/2 sm:bottom-auto sm:w-[min(92vw,30rem)] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-[28px] sm:p-8"
+        >
+          <SheetHeader className="p-0 pr-8">
+            <span className="mb-2 grid size-12 place-items-center rounded-full bg-brand/15 text-brand">
+              <CheckCircle2 size={25} />
+            </span>
+            <SheetTitle className="text-2xl font-medium leading-tight tracking-[-.04em] text-white">
+              Merci, votre demande est enregistrée.
+            </SheetTitle>
+            <SheetDescription className="pt-1 text-[15px] leading-7 text-white/70">
+              {confirmation?.waitingList
+                ? "Votre demande figure sur notre liste d’attente. Notre équipe vous contactera bientôt au sujet de la prochaine session."
+                : "Notre équipe vous contactera bientôt sur WhatsApp pour confirmer votre place et les modalités de paiement."}
+            </SheetDescription>
+          </SheetHeader>
+          <button
+            className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-white hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+            type="button"
+            onClick={() => {
+              if (!confirmation) return;
+              const { whatsappUrl } = confirmation;
+              void trackConversion("whatsapp_click").then(() => {
+                window.location.assign(whatsappUrl);
+              });
+            }}
+          >
+            Envoyer aussi les détails sur WhatsApp <ArrowUpRight size={17} />
+          </button>
+        </SheetContent>
+      </Sheet>
 
       <div className="overflow-hidden rounded-[22px] border border-white/10 bg-white/[.045] lg:col-span-2">
         <div className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">

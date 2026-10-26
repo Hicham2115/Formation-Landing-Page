@@ -4,6 +4,7 @@ import "lenis/dist/lenis.css";
 import "./globals.css";
 import ScrollReveal from "./scroll-reveal";
 import SmoothScroll from "./smooth-scroll";
+import AnalyticsScripts from "@/components/analytics-scripts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Formation au laser auriculaire pour médecins | Addic’s Laser",
+  title: "Formation laser auriculaire à Mohammedia | Addic’s Laser",
   description:
-    "Une journée pour les médecins et professionnels de santé : découvrez la réflexologie auriculaire par bio-stimulation laser, à Mohammedia le 31 octobre 2026.",
+    "Une journée de formation au laser auriculaire pour les professionnels de santé, avec laser professionnel inclus. Mohammedia, le 31 octobre 2026.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <AnalyticsScripts />
         <SmoothScroll />
         <ScrollReveal />
         {children}
