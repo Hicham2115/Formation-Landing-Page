@@ -212,6 +212,16 @@ html[data-reveal-ready="true"] [data-scroll-reveal="true"][data-revealed="true"]
   }
 }
 
+@keyframes company-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-scroll-reveal="true"] {
     opacity: 1 !important;

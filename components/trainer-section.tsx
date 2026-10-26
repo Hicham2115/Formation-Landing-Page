@@ -52,29 +52,41 @@ export default function TrainerSection() {
           <p>
             Psychothérapeute, formatrice et fondatrice de Full International
             Academy, Siham Boulla anime cette journée consacrée à la réflexologie
-            auriculaire et à ses applications par bio-stimulation laser.
+            auriculaire et à la bio-stimulation laser.
           </p>
           <p>
-            Elle guide les participants des repères anatomiques au repérage des
-            points neuro-réflexes, puis présente les protocoles abordés pour les
-            addictions et les états émotionnels.
+            Son parcours comprend près de 22 ans d’expérience en communication
+            globale, relations presse et digital, sur les marchés français,
+            monégasque et marocain, auprès de secteurs comme la santé,
+            l’automobile, les cosmétiques et l’assurance.
+          </p>
+          <p>
+            Elle a fondé ENIA, agence de communication 360° et de relations
+            presse, puis FULLMARKET, spécialisée dans le digital, le marketing
+            et la régie publicitaire. Diplômée en communication marketing, elle
+            est également diplômée en magnétisme, sophrologie et EFT.
+          </p>
+          <p>
+            Pendant la formation, elle guide les participants des repères
+            anatomiques au repérage des points neuro-réflexes, puis aux
+            protocoles abordés pour les addictions et les états émotionnels.
           </p>
         </div>
 
         <div className="mt-10 border-y border-divider py-5 sm:mt-12 sm:py-6">
-          <p className="mb-4 text-[10px] font-semibold tracking-[.16em] text-neutral-500">
+          <p className="mb-5 text-[10px] font-semibold tracking-[.18em] text-neutral-500">
             SON PARCOURS
           </p>
-          <ul className="grid gap-3 sm:grid-cols-2 sm:gap-x-6">
-            {credentials.map((credential) => (
+          <ul className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+            {credentials.map((credential, index) => (
               <li
                 key={credential}
-                className="flex items-center gap-3 text-sm text-ink"
+                className={`flex items-center gap-3 text-base leading-6 text-ink ${index === 2 ? "sm:col-span-2" : ""}`}
               >
-                <span className="grid size-6 shrink-0 place-items-center rounded-full bg-soft text-brand">
-                  <Check size={13} strokeWidth={2.5} />
+                <span className="grid size-9 shrink-0 place-items-center rounded-full bg-soft text-brand">
+                  <Check size={15} strokeWidth={2.25} />
                 </span>
-                {credential}
+                <span>{credential}</span>
               </li>
             ))}
           </ul>

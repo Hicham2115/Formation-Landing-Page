@@ -25,38 +25,43 @@ export default function Faq() {
   return (
     <>
       <section
-        className="grid gap-10 py-14 sm:grid-cols-[.7fr_1.3fr] sm:py-20"
+        className="grid gap-10 py-14 sm:py-20 lg:grid-cols-[.9fr_1.1fr] lg:gap-16"
         id="faq"
       >
-        <div>
+        <div className="lg:pt-2">
           <Label>VOS QUESTIONS</Label>
-          <h2 className="text-4xl font-medium leading-[1.02] tracking-[-.065em] sm:text-6xl">
-            Les détails,
-            <br />
-            sans détour.
+          <h2 className="max-w-[11ch] text-5xl font-medium leading-[.98] tracking-[-.065em] sm:text-6xl lg:text-[4.5rem]">
+            Des questions ? Nos réponses.
           </h2>
+          <p className="mt-5 max-w-md text-base leading-7 text-neutral-600 sm:text-lg sm:leading-8">
+            Tout ce qu’il faut savoir sur la formation et son déroulement.
+          </p>
           <a
-            className="mt-7 inline-flex items-center gap-2 text-xs font-medium"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             href={`tel:${phone}`}
           >
             Parler à l’équipe <ArrowUpRight size={15} className="text-brand" />
           </a>
         </div>
-        <div>
+        <div className="grid content-start gap-3 sm:gap-4">
           {faqs.map(([question, answer]) => (
             <details
               key={question}
-              className="group border-b border-divider py-5"
+              className="group rounded-[28px] bg-soft px-5 py-5 sm:rounded-[40px] sm:px-8 sm:py-7"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium sm:text-base">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-lg font-medium leading-snug tracking-[-.025em] marker:hidden sm:text-[21px] [&::-webkit-details-marker]:hidden">
                 {question}
-                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-divider text-lg font-light transition group-open:rotate-45 group-open:border-brand group-open:text-brand">
+                <span aria-hidden="true" className="grid size-8 shrink-0 place-items-center text-[28px] font-light leading-none text-ink transition-transform duration-300 ease-out group-open:rotate-45 motion-reduce:transition-none">
                   +
                 </span>
               </summary>
-              <p className="max-w-2xl pr-12 pt-4 text-sm leading-6 text-neutral-600">
-                {answer}
-              </p>
+              <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(.22,.8,.2,1)] group-open:grid-rows-[1fr] motion-reduce:transition-none">
+                <div className="min-h-0 overflow-hidden">
+                  <p className="max-w-2xl pt-4 text-base leading-7 text-neutral-600 sm:pr-12">
+                    {answer}
+                  </p>
+                </div>
+              </div>
             </details>
           ))}
         </div>
