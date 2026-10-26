@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "lenis/dist/lenis.css";
 import "./globals.css";
+import ScrollReveal from "./scroll-reveal";
 import SmoothScroll from "./smooth-scroll";
 
 const geistSans = Geist({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <SmoothScroll />
+        <ScrollReveal />
         {children}
       </body>
     </html>

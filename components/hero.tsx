@@ -13,25 +13,36 @@ export default function Hero() {
       <section
         className="grid overflow-hidden rounded-[26px] bg-ink text-white lg:min-h-[620px] lg:grid-cols-[1.05fr_.95fr]"
         id="top"
+        data-no-reveal
       >
-        <div className="flex flex-col justify-center px-7 py-12 motion-safe:animate-[soft-rise_.75s_cubic-bezier(.22,.8,.2,1)_both] sm:px-12 lg:px-16 lg:py-16">
-          <p className="mb-8 inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/[.04] px-3.5 py-2 text-[9px] font-bold uppercase tracking-[.2em] text-white">
+        <div className="flex flex-col justify-center px-7 py-12 sm:px-12 lg:px-16 lg:py-16">
+          <p className="mb-8 inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/[.04] px-3.5 py-2 text-[9px] font-bold uppercase tracking-[.2em] text-white motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
             <span className="size-1.5 rounded-full  bg-brand motion-safe:animate-[pulse-dot_2.2s_ease-in-out_infinite]" />
             Formation professionnelle <span className="text-white/30">·</span>{" "}
             Mohammedia
           </p>
           <h1 className="max-w-[650px] text-[clamp(1.9rem,4.8vw,5.3rem)] font-medium leading-[.96] tracking-[-.075em]">
-            <span className="whitespace-nowrap">Un Nouvel Outil Pour</span>
-            <br />
-            <em className="pr-2 font-normal italic text-brand">Accompagner</em>
-            <br />
-            Le Changement.
+            <span className="block overflow-hidden pb-[.08em]">
+              <span className="inline-block whitespace-nowrap motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:160ms]">
+                Un Nouvel Outil Pour
+              </span>
+            </span>
+            <span className="block overflow-hidden pb-[.08em]">
+              <em className="inline-block pr-2 font-normal italic text-brand motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:300ms]">
+                Accompagner
+              </em>
+            </span>
+            <span className="block overflow-hidden pb-[.08em]">
+              <span className="inline-block motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:440ms]">
+                Le Changement.
+              </span>
+            </span>
           </h1>
-          <p className="mt-7 max-w-lg text-sm leading-7 text-white/90 sm:text-base">
+          <p className="mt-7 max-w-lg text-sm leading-7 text-white/90 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:540ms] sm:text-base">
             Découvrez la réflexologie auriculaire par bio-stimulation laser,
             appliquée aux addictions et aux états émotionnels.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:640ms]">
             <a
               className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3.5 text-sm font-semibold duration-300 text-white transition hover:bg-white hover:text-ink"
               href={`tel:${phone}`}
@@ -45,7 +56,7 @@ export default function Hero() {
               Découvrir le programme <ArrowDownRight size={15} />
             </a>
           </div>
-          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-5 text-[13px] text-white">
+          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-5 text-[13px] text-white motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:740ms]">
             <span className="inline-flex items-center gap-2">
               <CalendarDays size={14} /> Samedi 31 octobre 2026
             </span>
