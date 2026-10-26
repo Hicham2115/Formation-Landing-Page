@@ -103,7 +103,7 @@ function CountUp({
 export default function CourseFacts() {
   return (
     <section
-      className="py-20 sm:py-24 lg:py-28"
+      className="pb-20 pt-10 sm:pb-24 sm:pt-12 lg:pb-28 lg:pt-14"
       aria-label="La formation en chiffres"
     >
       <div className="mb-10 inline-flex items-center gap-2.5 rounded-full bg-secondary px-4 py-2.5 font-mono text-[10px] font-semibold tracking-[.12em] text-ink sm:mb-12">

@@ -21,7 +21,7 @@ const images = [
 export default function ImageStory() {
   return (
     <section
-      className="grid gap-4 pb-20 sm:grid-cols-2 sm:pb-28 lg:grid-cols-3 lg:gap-5"
+      className="grid gap-4 pb-10 sm:grid-cols-2 sm:pb-12 lg:grid-cols-3 lg:gap-5 lg:pb-14"
       aria-label="La formation en images"
     >
       {images.map((image, index) => (
