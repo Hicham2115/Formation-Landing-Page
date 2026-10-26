@@ -3,6 +3,7 @@ import CompanyReferences from "@/components/company-references";
 import CourseFacts from "@/components/course-facts";
 import CourseDetails from "@/components/course-details";
 import CourseIntro from "@/components/course-intro";
+import DeviceOverview from "@/components/device-overview";
 import Faq from "@/components/faq";
 import Hero from "@/components/hero";
 import ImageStory from "@/components/image-story";
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <CourseIntro />
         <CourseDetails />
+        <DeviceOverview />
         <CourseFacts />
         <ImageStory />
         <ProgramSection />

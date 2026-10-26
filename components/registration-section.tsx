@@ -8,21 +8,6 @@ import {
 } from "lucide-react";
 import { phone } from "@/lib/site";
 
-const laserSpecifications = [
-  ["Type", "Laser manuel de classe 3R"],
-  ["Classe de protection", "Alimentation interne"],
-  ["Émission", "Diode laser à émission continue"],
-  ["Puissance nominale", "50 mW ± 10 %"],
-  ["Puissance absorbée", "360 mW"],
-  ["Densité de puissance", "Environ 1 J/cm²"],
-  ["Longueur d’onde", "675 à 695 nm"],
-  ["Alimentation", "Interne · 4,5 V DC · 3 piles AAA de 1,5 V (LR03)"],
-  ["Fonctionnement", "Continu, arrêt par bouton-poussoir"],
-  ["Matériaux", "Acier inoxydable sans nickel · aluminium anodisé"],
-  ["Normes déclarées", "EN 60601, EN 60825, EN 40411, EN 980, EN 14971"],
-  ["Garantie", "2 ans à compter de la date d’achat"],
-];
-
 export default function RegistrationSection() {
   return (
     <>
@@ -113,41 +98,6 @@ export default function RegistrationSection() {
               <span>Pack professionnel pour vous former et vous équiper</span>
             </li>
           </ul>
-          <details className="group mb-6 border-y border-divider py-4">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium marker:hidden [&::-webkit-details-marker]:hidden">
-              Applications et fiche technique
-              <span className="text-lg text-brand transition-transform group-open:rotate-45">
-                +
-              </span>
-            </summary>
-            <p className="mt-3 text-xs font-semibold text-ink">
-              Applications abordées
-            </p>
-            <p className="mt-1 text-xs leading-5 text-neutral-600">
-              Biostimulation, laserpuncture (stimulation laser de points
-              d’acupuncture), acupuncture traditionnelle et microsystèmes,
-              notamment réflexologie et auriculothérapie.
-            </p>
-            <p className="mt-4 text-xs font-semibold text-ink">
-              Caractéristiques de l’appareil
-            </p>
-            <dl className="mt-3 grid gap-x-4 text-xs sm:grid-cols-2">
-              {laserSpecifications.map(([label, value]) => (
-                <div
-                  className="flex flex-col gap-1 border-t border-divider py-2"
-                  key={label}
-                >
-                  <dt className="text-neutral-500">{label}</dt>
-                  <dd className="font-medium text-ink">{value}</dd>
-                </div>
-              ))}
-            </dl>
-            <p className="mt-3 text-[10px] leading-5 text-neutral-500">
-              La formation porte sur la découverte de l’appareil et de ces
-              applications. Toute utilisation auprès d’un patient relève de
-              l’évaluation et de la responsabilité du professionnel de santé.
-            </p>
-          </details>
           <a
             className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:px-9"
             href={`tel:${phone}`}
