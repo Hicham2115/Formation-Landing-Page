@@ -22,17 +22,17 @@ export default function RegistrationSection() {
           <h2 className="max-w-lg text-4xl font-medium leading-[1.04] tracking-[-.065em] sm:text-6xl">
             Découvrez le laser auriculaire pour votre <em className="not-italic text-brand">pratique.</em>
           </h2>
-          <p className="mt-6 max-w-md text-sm leading-7 text-white/70">
+          <p className="mt-6 max-w-md text-[15px] leading-7 text-white/75">
             Retrouvez les détails de la session et contactez l’équipe pour
             confirmer votre inscription et les modalités.
           </p>
-          <div className="mt-8 grid gap-3 text-xs sm:grid-cols-2">
+          <div className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
             <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/5 p-4">
               <span className="grid size-10 shrink-0 place-items-center rounded-[11px] bg-brand text-base font-semibold text-white">
                 31
               </span>
               <span>
-                <span className="block text-[9px] font-semibold tracking-[.14em] text-white/50">
+                <span className="block text-[10px] font-semibold tracking-[.12em] text-white/60">
                   SAMEDI
                 </span>
                 <span className="mt-1 block font-medium text-white">
@@ -45,13 +45,13 @@ export default function RegistrationSection() {
                 <MapPin size={17} />
               </span>
               <span>
-                <span className="block text-[9px] font-semibold tracking-[.14em] text-white/50">
+                <span className="block text-[10px] font-semibold tracking-[.12em] text-white/60">
                   LIEU
                 </span>
                 <span className="mt-1 block font-medium text-white">
                   Centre Addic’s Laser
                 </span>
-                <span className="mt-1 block max-w-[220px] text-[10px] leading-4 text-white/60">
+                <span className="mt-1 block max-w-[220px] text-xs leading-5 text-white/70">
                   West Coast Office · Boulevard Hassan II · 28800 Mohammedia
                   · 5 min de la gare
                 </span>
@@ -73,13 +73,13 @@ export default function RegistrationSection() {
               31 OCTOBRE
             </span>
           </div>
-          <p className="mt-8 text-5xl font-semibold tracking-[-.07em] text-ink sm:text-6xl lg:text-7xl">
+          <p className="mt-8 text-[clamp(2.5rem,10vw,3.5rem)] font-semibold tracking-[-.07em] text-ink sm:text-6xl lg:text-7xl">
             22 900 <small className="text-base tracking-normal">DH HT</small>
           </p>
-          <p className="mt-2 text-sm text-neutral-600">
+          <p className="mt-2 text-[15px] leading-6 text-neutral-600">
             Tarif de la journée de formation
           </p>
-          <ul className="my-7 text-sm text-ink">
+          <ul className="my-7 text-[15px] leading-6 text-ink">
             <li className="flex items-center gap-4 border-t border-divider py-4">
               <Clock3 size={20} strokeWidth={1.7} /> Formation sur une journée
             </li>
@@ -104,7 +104,7 @@ export default function RegistrationSection() {
           >
             Appeler pour réserver <Phone size={16} />
           </a>
-          <p className="mt-4 text-[10px] leading-5 text-neutral-500">
+          <p className="mt-4 text-xs leading-5 text-neutral-600">
             *Certificat de formation associé à IPHM (Royaume-Uni) et CIRET-TP
             (France).
           </p>

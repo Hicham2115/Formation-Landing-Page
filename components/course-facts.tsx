@@ -106,7 +106,7 @@ export default function CourseFacts() {
       className="pb-20 pt-10 sm:pb-24 sm:pt-12 lg:pb-28 lg:pt-14"
       aria-label="La formation en chiffres"
     >
-      <div className="mb-10 inline-flex items-center gap-2.5 rounded-full bg-secondary px-4 py-2.5 font-mono text-[10px] font-semibold tracking-[.12em] text-ink sm:mb-12">
+      <div className="mb-10 inline-flex items-center gap-2.5 rounded-full bg-secondary px-4 py-2.5 font-mono text-[11px] font-semibold tracking-[.1em] text-ink sm:mb-12">
         <span className="grid size-[15px] place-items-center rounded-[3px] bg-brand text-white">
           <Plus size={11} strokeWidth={2.5} />
         </span>
@@ -136,7 +136,7 @@ export default function CourseFacts() {
             <h2 className="mt-5 text-base font-semibold tracking-[-.035em] sm:text-lg">
               {fact.title}
             </h2>
-            <p className="mt-2 max-w-[280px] text-sm leading-6 text-neutral-600">
+            <p className="mt-2 max-w-[280px] text-[15px] leading-7 text-neutral-600">
               {fact.detail}
             </p>
           </article>

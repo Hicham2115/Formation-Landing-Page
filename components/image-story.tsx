@@ -37,7 +37,7 @@ export default function ImageStory() {
             className="object-cover transition-transform duration-700 group-hover:scale-[1.035] motion-reduce:transition-none"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-80" />
-          <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 pb-5 pt-16 text-[9px] font-semibold tracking-[.16em] text-white sm:px-6 sm:pb-6">
+          <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 pb-5 pt-16 text-[11px] font-semibold tracking-[.12em] text-white sm:px-6 sm:pb-6">
             {image.caption}
             <span className="font-mono text-white/70">0{index + 1} / 03</span>
           </figcaption>

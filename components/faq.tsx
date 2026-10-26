@@ -29,7 +29,7 @@ export default function Faq() {
       >
         <div className="lg:pt-2">
           <Label>VOS QUESTIONS</Label>
-          <h2 className="max-w-[11ch] text-5xl font-medium leading-[.98] tracking-[-.065em] sm:text-6xl lg:text-[4.5rem]">
+          <h2 className="max-w-[11ch] text-4xl font-medium leading-[1.02] tracking-[-.065em] sm:text-6xl lg:text-[4.5rem]">
             Des questions ? Nos réponses.
           </h2>
           <p className="mt-5 max-w-md text-base leading-7 text-neutral-600 sm:text-lg sm:leading-8">
@@ -48,7 +48,7 @@ export default function Faq() {
               key={question}
               className="group rounded-[28px] bg-soft px-5 py-5 sm:rounded-[40px] sm:px-8 sm:py-7"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-lg font-medium leading-snug tracking-[-.025em] marker:hidden sm:text-[21px] [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-[17px] font-medium leading-snug tracking-[-.02em] marker:hidden sm:text-[21px] [&::-webkit-details-marker]:hidden">
                 {question}
                 <span aria-hidden="true" className="grid size-8 shrink-0 place-items-center text-[28px] font-light leading-none text-ink transition-transform duration-300 ease-out group-open:rotate-45 motion-reduce:transition-none">
                   +

@@ -102,7 +102,7 @@ export default function ProgramSection() {
             <br />à la <em className="not-italic text-brand">pratique.</em>
           </h2>
         </div>
-        <p className="max-w-md text-sm leading-7 text-white/65 sm:justify-self-end">
+        <p className="max-w-md text-[15px] leading-7 text-white/70 sm:justify-self-end">
           Pour les médecins et professionnels de santé : sept modules pour
           découvrir les repères auriculaires, l’appareil laser et les protocoles
           étudiés pendant la formation.
@@ -146,7 +146,7 @@ export default function ProgramSection() {
                   </span>
                   {activeModule === index && (
                     <span
-                      className="mt-3 block space-y-2 text-sm leading-6 text-white/65 lg:hidden"
+                      className="mt-3 block space-y-2 text-[15px] leading-7 text-white/70 lg:hidden"
                       id={`module-topics-${index}`}
                     >
                       {module.topics.map((topic) => (
@@ -217,7 +217,7 @@ export default function ProgramSection() {
                 +
               </span>
             </summary>
-            <ul className="mt-3 hidden space-y-2 text-sm leading-6 text-white/65 lg:block">
+            <ul className="mt-3 hidden space-y-2 text-[15px] leading-7 text-white/70 lg:block">
               {active.topics.map((topic) => (
                 <li className="flex gap-2.5" key={topic}>
                   <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-brand" />
@@ -229,7 +229,7 @@ export default function ProgramSection() {
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-4 pt-6 text-xs text-white/60">
+      <div className="flex flex-wrap items-center justify-between gap-4 pt-6 text-sm text-white/70">
         <span className="inline-flex items-center gap-2">
           <Clock3 size={15} /> Format intensif sur une journée
         </span>

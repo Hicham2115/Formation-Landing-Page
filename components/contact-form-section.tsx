@@ -64,7 +64,7 @@ export default function ContactFormSection() {
         >
           Parlons de votre projet de formation.
         </h2>
-        <p className="mt-5 max-w-md text-sm leading-7 text-white/65 sm:text-base">
+        <p className="mt-5 max-w-md text-[15px] leading-7 text-white/70 sm:text-base">
           Vous êtes médecin ou professionnel·le de santé ? Envoyez votre
           question à l’équipe et nous vous répondrons au sujet de la session.
         </p>
@@ -95,7 +95,7 @@ export default function ContactFormSection() {
           >
             {(field) => (
               <div>
-                <label className="text-xs font-medium text-white/85" htmlFor={field.name}>
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
                   Nom complet
                 </label>
                 <input
@@ -122,7 +122,7 @@ export default function ContactFormSection() {
           >
             {(field) => (
               <div>
-                <label className="text-xs font-medium text-white/85" htmlFor={field.name}>
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
                   Adresse e-mail
                 </label>
                 <input
@@ -150,7 +150,7 @@ export default function ContactFormSection() {
           >
             {(field) => (
               <div className="sm:col-span-2">
-                <label className="text-xs font-medium text-white/85" htmlFor={field.name}>
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
                   Profession
                 </label>
                 <input
@@ -177,7 +177,7 @@ export default function ContactFormSection() {
           >
             {(field) => (
               <div className="sm:col-span-2">
-                <label className="text-xs font-medium text-white/85" htmlFor={field.name}>
+                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
                   Votre question
                 </label>
                 <textarea
@@ -198,7 +198,7 @@ export default function ContactFormSection() {
         </div>
 
         <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-sm text-xs leading-5 text-white/45">
+          <p className="max-w-sm text-[13px] leading-5 text-white/60">
             Le message s’ouvrira dans WhatsApp pour être envoyé à l’équipe.
           </p>
           <button

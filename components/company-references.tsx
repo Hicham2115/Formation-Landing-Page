@@ -83,7 +83,7 @@ export default function CompanyReferences() {
       <div className="grid items-center gap-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-10">
         <div>
           <Label>QUELQUES RÉFÉRENCES</Label>
-          <p className="max-w-[260px] text-xs leading-5 text-black">
+          <p className="max-w-[260px] text-sm leading-6 text-black">
             18 références professionnelles, dans des secteurs variés de la santé
             à l’industrie et aux services.
           </p>

@@ -44,7 +44,7 @@ export default function CourseDetails() {
             Un cadre clair, des bases solides.
           </h2>
         </div>
-        <p className="max-w-lg text-sm leading-7 text-ink sm:text-base lg:justify-self-end">
+        <p className="max-w-lg text-[15px] leading-7 text-ink sm:text-base lg:justify-self-end">
           Une journée pour découvrir l’appareil et les repères de
           l’auriculothérapie laser, puis explorer son intégration à
           l’accompagnement des patients.
@@ -60,7 +60,7 @@ export default function CourseDetails() {
             <h3 className="mt-3 text-lg font-medium leading-snug tracking-[-.035em]">
               {detail.title}
             </h3>
-            <ul className="mt-4 space-y-3 text-sm leading-6 text-ink">
+            <ul className="mt-4 space-y-3 text-[15px] leading-7 text-ink">
               {detail.items.map((item) => (
                 <li className="flex gap-2.5" key={item}>
                   <span
@@ -76,13 +76,13 @@ export default function CourseDetails() {
       </div>
 
       <details className="group mt-10 rounded-2xl bg-soft px-5 py-4 sm:mt-12 sm:px-6">
-        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium marker:hidden [&::-webkit-details-marker]:hidden">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-medium marker:hidden [&::-webkit-details-marker]:hidden">
           Thèmes abordés pendant la formation
           <span className="text-lg text-brand transition-transform group-open:rotate-45 motion-reduce:transition-none">
             +
           </span>
         </summary>
-        <div className="mt-4 grid gap-4 border-t border-divider pt-4 text-xs leading-5 text-ink sm:grid-cols-2 sm:gap-8">
+        <div className="mt-4 grid gap-4 border-t border-divider pt-4 text-sm leading-6 text-ink sm:grid-cols-2 sm:gap-8">
           <p>
             Exemples de protocoles étudiés : sevrage tabagique, alcool,
             cannabis, gestion du poids, alimentation compulsive, anxiété,

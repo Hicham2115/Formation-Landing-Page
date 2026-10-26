@@ -63,7 +63,7 @@ export default function DeviceOverview() {
                 </li>
               ))}
             </ul>
-            <p className="mt-7 border-t border-white/15 pt-4 text-[13px] leading-5 text-white/60">
+            <p className="mt-7 border-t border-white/15 pt-4 text-sm leading-6 text-white/70">
               Présentation à des fins de formation. Toute utilisation auprès
               d’un patient relève de l’évaluation et de la responsabilité du
               professionnel de santé.
@@ -91,8 +91,8 @@ export default function DeviceOverview() {
                 className={`grid grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] gap-3 border-t border-divider py-3.5 ${index === 0 ? "sm:border-t" : ""}`}
                 key={label}
               >
-                <dt className="text-[13px] leading-5 text-neutral-500">{label}</dt>
-                <dd className="text-[13px] font-medium leading-5 text-ink">{value}</dd>
+                <dt className="text-sm leading-6 text-neutral-600">{label}</dt>
+                <dd className="text-sm font-medium leading-6 text-ink">{value}</dd>
               </div>
             ))}
           </dl>

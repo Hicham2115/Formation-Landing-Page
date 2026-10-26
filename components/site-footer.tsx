@@ -91,7 +91,7 @@ export default function SiteFooter() {
             </a>
           </div>
 
-          <p className="mt-5 max-w-4xl text-[10px] leading-5 text-white">
+          <p className="mt-5 max-w-4xl text-xs leading-5 text-white/80">
             Cette formation ne remplace pas un diagnostic ni une prise en
             charge médicale adaptée à chaque patient.
           </p>

@@ -36,7 +36,7 @@ export default function Hero() {
               </span>
             </span>
           </h1>
-          <p className="mt-7 max-w-lg text-sm leading-7 text-white/90 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:540ms] sm:text-base">
+          <p className="mt-7 max-w-lg text-[15px] leading-7 text-white/90 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:540ms] sm:text-base">
             Une journée pour les médecins et professionnels de santé : découvrez
             les bases de la réflexologie auriculaire par bio-stimulation laser,
             l’appareil et les protocoles présentés pour accompagner vos
@@ -56,7 +56,7 @@ export default function Hero() {
               Découvrir le programme <ArrowDownRight size={15} />
             </a>
           </div>
-          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-5 text-[13px] text-white motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:740ms]">
+          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-5 text-sm text-white motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:740ms]">
             <span className="inline-flex items-center gap-2">
               <CalendarDays size={14} /> Samedi 31 octobre 2026
             </span>
