@@ -1,5 +1,6 @@
 import { ArrowUp, Phone } from "lucide-react";
 import BrandLockup from "@/components/brand-lockup";
+import CurrentYear from "@/components/current-year";
 import { phone } from "@/lib/site";
 
 const footerGroups = [
@@ -50,7 +51,7 @@ export default function SiteFooter() {
                   {group.links.map(([label, href]) => (
                     <li key={label}>
                       <a
-                        className="transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+                        className="underline decoration-transparent underline-offset-4 transition-colors hover:text-brand hover:decoration-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
                         href={href}
                       >
                         {label}
@@ -64,7 +65,7 @@ export default function SiteFooter() {
             <div>
               <h2 className="text-sm font-semibold text-white">Contact</h2>
               <a
-                className="mt-5 inline-flex items-center gap-2 text-sm text-white transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+                className="mt-5 inline-flex items-center gap-2 text-sm text-white underline decoration-transparent underline-offset-4 transition-colors hover:decoration-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
                 href={`tel:${phone}`}
               >
                 <Phone size={15} className="text-brand" />
@@ -81,9 +82,9 @@ export default function SiteFooter() {
           </div>
 
           <div className="mt-10 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-white sm:flex-row sm:items-center sm:justify-between">
-            <span>© 2026 Addic’s Laser · Full International Academy</span>
+            <span>© <CurrentYear /> Addic’s Laser · Full International Academy</span>
             <a
-              className="w-fit transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+              className="w-fit underline decoration-transparent underline-offset-4 transition-colors hover:text-brand hover:decoration-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
               href="#top"
             >
               Retour en haut ↑
