@@ -16,7 +16,7 @@ export default function TrainerSection() {
     >
       <div className="group relative aspect-[4/4.6] min-h-[440px] overflow-hidden rounded-[24px] bg-secondary sm:min-h-[560px]">
         <Image
-          src="/images/siham-boulla-portrait.jpg"
+          src="/images/siham-boulla-profile.jpg"
           alt="Portrait de Siham Boulla dans son cabinet"
           fill
           sizes="(max-width: 1024px) 100vw, 48vw"
@@ -48,10 +48,18 @@ export default function TrainerSection() {
           Une formation menée par une{" "}
           <em className="not-italic text-brand">praticienne.</em>
         </h2>
-        <p className="mt-7 max-w-lg text-base leading-7 text-neutral-600 sm:mt-8 sm:text-[17px] sm:leading-8">
-          Siham Boulla vous accompagne dans la découverte de la méthode et des
-          applications présentées au programme.
-        </p>
+        <div className="mt-7 max-w-2xl space-y-4 text-base leading-7 text-ink sm:mt-8 sm:text-[17px] sm:leading-8">
+          <p>
+            Psychothérapeute, formatrice et fondatrice de Full International
+            Academy, Siham Boulla anime cette journée consacrée à la réflexologie
+            auriculaire et à ses applications par bio-stimulation laser.
+          </p>
+          <p>
+            Elle guide les participants des repères anatomiques au repérage des
+            points neuro-réflexes, puis présente les protocoles abordés pour les
+            addictions et les états émotionnels.
+          </p>
+        </div>
 
         <div className="mt-10 border-y border-divider py-5 sm:mt-12 sm:py-6">
           <p className="mb-4 text-[10px] font-semibold tracking-[.16em] text-neutral-500">
