@@ -1,5 +1,6 @@
 import ContactSection from "@/components/contact-section";
 import CompanyReferences from "@/components/company-references";
+import ContactFormSection from "@/components/contact-form-section";
 import CourseFacts from "@/components/course-facts";
 import CourseDetails from "@/components/course-details";
 import CourseIntro from "@/components/course-intro";
@@ -20,15 +21,16 @@ export default function Home() {
       <main>
         <Hero />
         <CourseIntro />
-        <CourseDetails />
-        <DeviceOverview />
         <CourseFacts />
-        <ImageStory />
+        <CourseDetails />
         <ProgramSection />
+        <DeviceOverview />
+        <ImageStory />
         <TrainerSection />
         <CompanyReferences />
         <RegistrationSection />
         <Faq />
+        <ContactFormSection />
         <ContactSection />
       </main>
       <SiteFooter />

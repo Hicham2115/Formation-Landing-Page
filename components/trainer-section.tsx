@@ -11,7 +11,7 @@ const credentials = [
 export default function TrainerSection() {
   return (
     <section
-      className="grid items-center gap-10 border-t border-divider py-16 sm:gap-14 sm:py-24 lg:grid-cols-[1.02fr_.98fr] lg:gap-20"
+      className="grid items-center gap-10 border-t border-divider py-16 sm:gap-14 sm:py-24 lg:grid-cols-[.88fr_1.12fr] lg:gap-14"
       id="formatrice"
     >
       <div className="group relative aspect-[4/4.6] min-h-[440px] overflow-hidden rounded-[24px] bg-secondary sm:min-h-[560px]">
@@ -44,7 +44,7 @@ export default function TrainerSection() {
 
       <div className="lg:py-8">
         <Label>TRANSMISSION & EXPÉRIENCE</Label>
-        <h2 className="max-w-xl text-4xl font-medium leading-[1.03] tracking-[-.065em] sm:text-6xl lg:text-[4.25rem]">
+        <h2 className="max-w-none text-4xl font-medium leading-[1.03] tracking-[-.065em] sm:text-6xl lg:text-[4rem]">
           Une formation menée par une{" "}
           <em className="not-italic text-brand">praticienne.</em>
         </h2>
