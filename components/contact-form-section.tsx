@@ -360,16 +360,24 @@ export default function ContactFormSection() {
         <SheetContent
           side="bottom"
           showCloseButton
-          className="inset-x-0 bottom-0 top-auto max-h-[90dvh] overflow-y-auto rounded-t-[28px] border border-white/10 bg-ink p-6 text-white sm:inset-auto sm:left-1/2 sm:top-1/2 sm:bottom-auto sm:w-[min(92vw,30rem)] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-[28px] sm:p-8"
+          style={{
+            left: "50%",
+            right: "auto",
+            top: "50%",
+            bottom: "auto",
+            transform: "translate(-50%, -50%)",
+            width: "min(92vw, 30rem)",
+          }}
+          className="max-h-[90dvh] overflow-y-auto rounded-[28px] border border-white/10 bg-ink p-6 text-white sm:p-8"
         >
-          <SheetHeader className="p-0 pr-8">
+          <SheetHeader className="items-center p-0 text-center">
             <span className="mb-2 grid size-12 place-items-center rounded-full bg-brand/15 text-brand">
               <CheckCircle2 size={25} />
             </span>
-            <SheetTitle className="text-2xl font-medium leading-tight tracking-[-.04em] text-white">
+            <SheetTitle className="text-center text-2xl font-medium leading-tight tracking-[-.04em] text-white">
               Merci, votre demande est enregistrée.
             </SheetTitle>
-            <SheetDescription className="pt-1 text-[15px] leading-7 text-white/70">
+            <SheetDescription className="pt-1 text-center text-[15px] leading-7 text-white/70">
               {confirmation?.waitingList
                 ? "Votre demande figure sur notre liste d’attente. Notre équipe vous contactera bientôt au sujet de la prochaine session."
                 : "Notre équipe vous contactera bientôt sur WhatsApp pour confirmer votre place et les modalités de paiement."}
@@ -378,15 +386,9 @@ export default function ContactFormSection() {
           <button
             className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-white hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             type="button"
-            onClick={() => {
-              if (!confirmation) return;
-              const { whatsappUrl } = confirmation;
-              void trackConversion("whatsapp_click").then(() => {
-                window.location.assign(whatsappUrl);
-              });
-            }}
+            onClick={() => setConfirmation(null)}
           >
-            Envoyer aussi les détails sur WhatsApp <ArrowUpRight size={17} />
+            Fermer
           </button>
         </SheetContent>
       </Sheet>
