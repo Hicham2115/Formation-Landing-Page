@@ -10,6 +10,7 @@ import { phone } from "@/lib/site";
 
 const laserSpecifications = [
   ["Type", "Laser manuel de classe 3R"],
+  ["Classe de protection", "Alimentation interne"],
   ["Émission", "Diode laser à émission continue"],
   ["Puissance nominale", "50 mW ± 10 %"],
   ["Puissance absorbée", "360 mW"],
@@ -107,16 +108,28 @@ export default function RegistrationSection() {
                 auriculaire par bio-stimulation laser*
               </span>
             </li>
+            <li className="flex items-center gap-4 border-b border-divider py-4">
+              <BadgeCheck size={20} strokeWidth={1.7} />
+              <span>Pack professionnel pour vous former et vous équiper</span>
+            </li>
           </ul>
           <details className="group mb-6 border-y border-divider py-4">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium marker:hidden [&::-webkit-details-marker]:hidden">
-              Fiche technique de l’appareil
+              Applications et fiche technique
               <span className="text-lg text-brand transition-transform group-open:rotate-45">
                 +
               </span>
             </summary>
-            <p className="mt-2 text-[10px] leading-5 text-neutral-500">
-              Caractéristiques techniques et garantie de l’appareil.
+            <p className="mt-3 text-xs font-semibold text-ink">
+              Applications abordées
+            </p>
+            <p className="mt-1 text-xs leading-5 text-neutral-600">
+              Biostimulation, laserpuncture (stimulation laser de points
+              d’acupuncture), acupuncture traditionnelle et microsystèmes,
+              notamment réflexologie et auriculothérapie.
+            </p>
+            <p className="mt-4 text-xs font-semibold text-ink">
+              Caractéristiques de l’appareil
             </p>
             <dl className="mt-3 grid gap-x-4 text-xs sm:grid-cols-2">
               {laserSpecifications.map(([label, value]) => (
@@ -130,14 +143,9 @@ export default function RegistrationSection() {
               ))}
             </dl>
             <p className="mt-3 text-[10px] leading-5 text-neutral-500">
-              La fiche mentionne la biostimulation, la laserpuncture, la
-              stimulation de points d’acupuncture, l’acupuncture traditionnelle
-              et les microsystèmes dont la réflexologie et l’auriculothérapie.
-              Elle décrit la méthode comme indolore et sans risque d’infection,
-              et mentionne la réduction du stress cellulaire ainsi que
-              l’activation de la circulation sanguine. Ces affirmations
-              reprennent le document source et ne constituent pas un avis
-              médical.
+              La formation porte sur la découverte de l’appareil et de ces
+              applications. Toute utilisation auprès d’un patient relève de
+              l’évaluation et de la responsabilité du professionnel de santé.
             </p>
           </details>
           <a
