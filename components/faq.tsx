@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import Label from "@/components/section-label";
-import { phone } from "@/lib/site";
 
 const faqs = [
   [
@@ -38,7 +37,7 @@ export default function Faq() {
           </p>
           <a
             className="mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
-            href={`tel:${phone}`}
+            href="#contact-form"
           >
             Parler à l’équipe <ArrowUpRight size={15} className="text-brand" />
           </a>

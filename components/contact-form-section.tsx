@@ -44,10 +44,8 @@ export default function ContactFormSection() {
         result.data.message,
       ].join("\n");
       const whatsappNumber = phone.replace(/\D/g, "");
-      window.open(
+      window.location.assign(
         `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
-        "_blank",
-        "noopener,noreferrer",
       );
     },
   });
@@ -55,6 +53,7 @@ export default function ContactFormSection() {
   return (
     <section
       className="my-16 grid gap-8 rounded-[28px] bg-ink px-6 py-9 text-white sm:my-20 sm:px-9 sm:py-12 lg:my-24 lg:grid-cols-[.78fr_1.22fr] lg:gap-14 lg:px-14 lg:py-14"
+      id="contact-form"
       aria-labelledby="contact-form-title"
     >
       <div className="flex flex-col items-start">

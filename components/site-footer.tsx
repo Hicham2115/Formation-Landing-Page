@@ -16,7 +16,7 @@ const footerGroups = [
     links: [
       ["Informations pratiques", "#inscription"],
       ["Questions fréquentes", "#faq"],
-      ["Réserver sa place", `tel:${phone}`],
+      ["Nous contacter", "#contact-form"],
     ],
   },
 ];

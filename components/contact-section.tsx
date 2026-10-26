@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import Label from "@/components/section-label";
-import { phone } from "@/lib/site";
 
 export default function ContactSection() {
   return (
@@ -18,9 +17,9 @@ export default function ContactSection() {
           </p>
           <a
             className="group mt-8 inline-flex min-h-14 items-center gap-4 rounded-full bg-brand py-2 pl-6 pr-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none"
-            href={`tel:${phone}`}
+            href="#contact-form"
           >
-            Réserver ma place
+            Remplir le formulaire
             <span className="grid size-10 place-items-center rounded-full bg-white/15 transition-colors group-hover:bg-brand/10">
               <ArrowUpRight size={17} className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none" />
             </span>

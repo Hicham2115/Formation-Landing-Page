@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight, Menu, Phone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Menu, MessageCircle } from "lucide-react";
 import BrandLockup from "@/components/brand-lockup";
 import {
   Sheet,
@@ -76,14 +76,14 @@ export default function MobileMenu() {
             <SheetClose
               render={
                 <a
-                  href={`tel:${phone}`}
+                  href="#contact-form"
                   className="flex min-h-14 items-center justify-between rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
                 />
               }
             >
               <span className="flex items-center gap-2.5">
-                <Phone size={16} />
-                Réserver ma place
+                <MessageCircle size={16} />
+                Nous contacter
               </span>
               <ArrowUpRight size={18} />
             </SheetClose>

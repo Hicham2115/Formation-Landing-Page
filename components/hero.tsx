@@ -5,7 +5,6 @@ import {
   CalendarDays,
   MapPin,
 } from "lucide-react";
-import { phone } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -42,7 +41,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:640ms]">
             <a
               className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3.5 text-sm font-semibold duration-300 text-white transition hover:bg-white hover:text-ink"
-              href={`tel:${phone}`}
+              href="#contact-form"
             >
               Réserver ma place <ArrowUpRight size={15} />
             </a>

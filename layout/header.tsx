@@ -2,7 +2,6 @@ import { ArrowUpRight } from "lucide-react";
 import BrandLockup from "@/components/brand-lockup";
 import MobileMenu from "@/layout/mobile-menu";
 import { navigationLinks } from "@/layout/navigation-links";
-import { phone } from "@/lib/site";
 
 export default function Header() {
   return (
@@ -27,9 +26,9 @@ export default function Header() {
       <div className="flex shrink-0 items-center gap-3">
         <a
           className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-semibold text-white transition hover:bg-brand sm:inline-flex"
-          href={`tel:${phone}`}
+          href="#contact-form"
         >
-          Réserver ma place <ArrowUpRight size={15} />
+          Nous contacter <ArrowUpRight size={15} />
         </a>
         <MobileMenu />
       </div>

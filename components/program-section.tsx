@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight, ArrowUpRight, Clock3 } from "lucide-react";
 import Label from "@/components/section-label";
-import { phone } from "@/lib/site";
 
 const modules = [
   {
@@ -199,7 +198,7 @@ export default function ProgramSection() {
         </span>
         <a
           className="inline-flex items-center gap-2 text-white transition hover:text-brand"
-          href={`tel:${phone}`}
+          href="#contact-form"
         >
           Poser une question <ArrowRight size={15} />
         </a>
