@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import BrandLockup from "@/components/brand-lockup";
 import { phone } from "@/lib/site";
 
 export default function SiteFooter() {
@@ -6,16 +7,8 @@ export default function SiteFooter() {
     <>
       <footer className="rounded-[26px] bg-ink px-6 py-9 text-white sm:px-10 sm:py-11">
         <div className="flex flex-col gap-7 border-b border-white/15 pb-8 sm:flex-row sm:items-center sm:justify-between">
-          <a className="flex items-center gap-2.5" href="#top">
-            <span className="text-[30px] font-black leading-none tracking-[-.09em]">
-              A<span className="text-brand">.</span>
-            </span>
-            <span className="text-[11px] font-bold leading-tight tracking-[.08em]">
-              ADDIC’S LASER
-              <small className="mt-1 block text-[8px] font-medium tracking-[.17em] text-white/50">
-                FORMATION PROFESSIONNELLE
-              </small>
-            </span>
+          <a href="#top" aria-label="Addic’s Laser, accueil">
+            <BrandLockup inverse />
           </a>
           <p className="max-w-xs text-sm leading-6 text-white/60">
             La connaissance au service d’un accompagnement plus éclairé.
