@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1664382953481-141e97ad9825?auto=format&fit=crop&w=1200&q=85",
-    alt: "Atelier de formation en petit groupe",
+    src: "/images/auriculotherapy-workshop.jpg",
+    alt: "Atelier de formation en petit groupe autour de l’auriculothérapie",
     caption: "APPRENDRE ENSEMBLE",
   },
   {
-    src: "https://images.unsplash.com/photo-1634656883281-3a665dd2bb8a?auto=format&fit=crop&w=1000&q=85",
-    alt: "Détail d’une oreille, zone centrale de la réflexologie auriculaire",
+    src: "/images/laser-ear-detail.jpg",
+    alt: "Démonstration d’un appareil de bio-stimulation laser près de l’oreille",
     caption: "AU CŒUR DE LA MÉTHODE",
   },
   {
