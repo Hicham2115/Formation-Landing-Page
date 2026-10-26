@@ -28,7 +28,7 @@ const faqs = [
   ],
   [
     "Quand et où aura lieu la session ?",
-    "La session se tient le samedi 31 octobre 2026 à Mohammedia, au Centre Addic’s Laser, Boulevard Hassan II.",
+    "La session se tient le samedi 31 octobre 2026 au YATCH CLUB DE MOHAMMEDIA, 28800 Mohammedia.",
   ],
 ];
 

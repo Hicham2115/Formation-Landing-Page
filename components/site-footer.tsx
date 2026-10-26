@@ -72,11 +72,8 @@ export default function SiteFooter() {
                 +212 613 755 122
               </a>
               <address className="mt-3 space-y-1 text-sm leading-5 text-white not-italic">
-                <span className="block">Centre Addic’s Laser</span>
-                <span className="block">Immeuble West Coast Office</span>
-                <span className="block">Boulevard Hassan II</span>
+                <span className="block">YATCH CLUB DE MOHAMMEDIA</span>
                 <span className="block">28800 Mohammedia, Maroc</span>
-                <span className="block">À 5 minutes de la gare</span>
               </address>
             </div>
           </div>

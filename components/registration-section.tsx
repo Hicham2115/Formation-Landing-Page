@@ -49,11 +49,10 @@ export default function RegistrationSection() {
                   LIEU
                 </span>
                 <span className="mt-1 block font-medium text-white">
-                  Centre Addic’s Laser
+                  YATCH CLUB DE MOHAMMEDIA
                 </span>
                 <span className="mt-1 block max-w-[220px] text-xs leading-5 text-white/70">
-                  West Coast Office · Boulevard Hassan II · 28800 Mohammedia
-                  · 5 min de la gare
+                  28800 Mohammedia
                 </span>
               </span>
             </div>

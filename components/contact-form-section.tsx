@@ -410,12 +410,12 @@ export default function ContactFormSection() {
                 NOUS TROUVER
               </p>
               <p className="mt-1 text-sm font-medium text-white">
-                Centre Addic’s Laser · Boulevard Hassan II · Mohammedia
+                YATCH CLUB DE MOHAMMEDIA · 28800 Mohammedia
               </p>
             </div>
           </div>
           <a
-            href="https://www.google.com/maps?q=33.71052551269531,-7.396710395812988&z=17&hl=en"
+            href="https://www.google.com/maps/search/?api=1&query=YATCH%20CLUB%20DE%20MOHAMMEDIA%2C%2028800%20Mohammedia"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-white/75 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
@@ -425,8 +425,8 @@ export default function ContactFormSection() {
         </div>
         <iframe
           className="h-[300px] w-full border-0 sm:h-[380px] lg:h-[420px]"
-          src="https://maps.google.com/maps?q=33.71052551269531,-7.396710395812988&z=17&output=embed"
-          title="Carte du Centre Addic’s Laser à Mohammedia"
+          src="https://maps.google.com/maps?q=YATCH%20CLUB%20DE%20MOHAMMEDIA%2C%2028800%20Mohammedia&output=embed"
+          title="Carte du Yatch Club de Mohammedia"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen
