@@ -354,7 +354,10 @@ export default function ContactFormSection() {
       <Sheet
         open={confirmation !== null}
         onOpenChange={(open) => {
-          if (!open) setConfirmation(null);
+          if (!open) {
+            form.reset();
+            setConfirmation(null);
+          }
         }}
       >
         <SheetContent
@@ -386,7 +389,10 @@ export default function ContactFormSection() {
           <button
             className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-white hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             type="button"
-            onClick={() => setConfirmation(null)}
+            onClick={() => {
+              form.reset();
+              setConfirmation(null);
+            }}
           >
             Fermer
           </button>
