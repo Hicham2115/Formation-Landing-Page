@@ -26,49 +26,53 @@ const applications = [
 export default function DeviceOverview() {
   return (
     <section
-      className="border-y border-divider py-14 sm:py-16 lg:py-20"
+      className="my-16 overflow-hidden rounded-[28px] bg-[#f3f3f1] px-5 py-8 sm:my-20 sm:px-8 sm:py-10 lg:my-24 lg:px-12 lg:py-14"
       aria-labelledby="device-overview-title"
     >
-      <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-14">
+      <div className="mb-8 grid gap-6 border-b border-black/10 pb-7 lg:grid-cols-[1fr_.7fr] lg:items-end lg:gap-12 lg:pb-9">
         <div>
-          <p className="mb-5 flex items-center gap-2 text-[11px] font-semibold tracking-[.16em] text-neutral-500">
+          <p className="mb-4 flex items-center gap-2 text-[11px] font-semibold tracking-[.16em] text-neutral-500">
             <span className="h-px w-5 bg-brand" /> APPAREIL & APPLICATIONS
           </p>
           <h2
-            className="max-w-[12ch] text-4xl font-medium leading-[1.02] tracking-[-.065em] sm:text-5xl lg:text-6xl"
+            className="max-w-[17ch] text-4xl font-medium leading-[1.02] tracking-[-.065em] sm:text-5xl lg:text-[3.5rem]"
             id="device-overview-title"
           >
-            Découvrez l’outil au cœur de la formation.
+            Le laser, ses usages et ses caractéristiques.
           </h2>
-          <p className="mt-5 max-w-md text-sm leading-7 text-neutral-600">
-            Une présentation claire des usages abordés et des caractéristiques
-            du laser auriculaire utilisé pendant la journée.
-          </p>
-          <div className="mt-8 rounded-2xl bg-soft p-5 sm:p-6">
-            <p className="text-[10px] font-semibold tracking-[.15em] text-brand">
+        </div>
+        <p className="max-w-lg text-[15px] leading-7 text-neutral-600 lg:justify-self-end">
+          Repères concrets sur le dispositif présenté pendant la journée et les
+          applications intégrées au programme.
+        </p>
+      </div>
+
+      <div className="grid gap-5 lg:grid-cols-[.72fr_1.28fr] lg:gap-6">
+        <div className="relative overflow-hidden rounded-[22px] bg-ink p-6 text-white sm:p-8">
+          <div aria-hidden="true" className="absolute -right-12 -top-14 size-44 rounded-full border border-white/10 sm:size-56" />
+          <div aria-hidden="true" className="absolute -right-5 -top-7 size-32 rounded-full border border-brand/40 sm:size-40" />
+          <div className="relative">
+            <p className="text-[10px] font-semibold tracking-[.16em] text-brand">
               CHAMPS D’APPLICATION ABORDÉS
             </p>
-            <ul className="mt-4 space-y-3 text-sm leading-6 text-ink">
+            <ul className="mt-6 space-y-4 text-[15px] leading-6 text-white/90">
               {applications.map((application) => (
                 <li className="flex gap-3" key={application}>
-                  <span
-                    aria-hidden="true"
-                    className="mt-2 size-1.5 shrink-0 rounded-full bg-brand"
-                  />
+                  <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-brand" />
                   {application}
                 </li>
               ))}
             </ul>
+            <p className="mt-7 border-t border-white/15 pt-4 text-[13px] leading-5 text-white/60">
+              Présentation à des fins de formation. Toute utilisation auprès
+              d’un patient relève de l’évaluation et de la responsabilité du
+              professionnel de santé.
+            </p>
           </div>
-          <p className="mt-4 text-xs leading-5 text-neutral-500">
-            Les applications sont présentées à des fins de formation. Toute
-            utilisation auprès d’un patient relève de l’évaluation et de la
-            responsabilité du professionnel de santé.
-          </p>
         </div>
 
-        <div className="rounded-[22px] border border-divider bg-white p-5 sm:p-7 lg:p-8">
-          <div className="flex items-end justify-between gap-4 border-b border-divider pb-5">
+        <div className="overflow-hidden rounded-[22px] border border-black/10 bg-white">
+          <div className="flex items-center justify-between gap-4 bg-white px-5 py-5 sm:px-7">
             <div>
               <p className="text-[10px] font-semibold tracking-[.15em] text-brand">
                 FICHE TECHNIQUE
@@ -77,18 +81,18 @@ export default function DeviceOverview() {
                 Spécifications de l’appareil
               </h3>
             </div>
-            <span className="hidden rounded-full bg-soft px-3 py-2 text-[10px] font-semibold text-ink sm:inline-flex">
+            <span className="shrink-0 rounded-full bg-soft px-3 py-2 text-[10px] font-semibold text-ink">
               CLASSE 3R
             </span>
           </div>
-          <dl className="mt-2 grid gap-x-8 sm:grid-cols-2">
-            {specifications.map(([label, value]) => (
+          <dl className="grid gap-x-7 px-5 pb-5 sm:grid-cols-2 sm:px-7 sm:pb-7">
+            {specifications.map(([label, value], index) => (
               <div
-                className="grid grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] gap-3 border-b border-divider py-3"
+                className={`grid grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] gap-3 border-t border-divider py-3.5 ${index === 0 ? "sm:border-t" : ""}`}
                 key={label}
               >
-                <dt className="text-xs leading-5 text-neutral-500">{label}</dt>
-                <dd className="text-xs font-medium leading-5 text-ink">{value}</dd>
+                <dt className="text-[13px] leading-5 text-neutral-500">{label}</dt>
+                <dd className="text-[13px] font-medium leading-5 text-ink">{value}</dd>
               </div>
             ))}
           </dl>
