@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowRight, ArrowUpRight, Clock3 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown, Clock3 } from "lucide-react";
 import Label from "@/components/section-label";
 
 const modules = [
@@ -112,46 +112,79 @@ export default function ProgramSection() {
       <div className="grid gap-8 pt-5 lg:grid-cols-[minmax(0,1fr)_minmax(250px,0.64fr)] lg:gap-12">
         <div className="order-1 min-w-0">
           {modules.map((module, index) => (
-            <button
-              key={module.title}
-              type="button"
-              aria-pressed={activeModule === index}
-              onMouseEnter={() => {
-                if (window.matchMedia("(hover: hover)").matches) {
-                  setActiveModule(index);
+            <div className="border-b border-white/15" key={module.title}>
+              <button
+                type="button"
+                aria-pressed={activeModule === index}
+                aria-expanded={activeModule === index}
+                aria-controls={
+                  activeModule === index ? `module-topics-${index}` : undefined
                 }
-              }}
-              onFocus={() => setActiveModule(index)}
-              onClick={() => setActiveModule(index)}
-              className={`group grid w-full grid-cols-[38px_1fr_20px] items-center gap-3 border-b border-white/15 py-5 text-left transition-colors sm:grid-cols-[60px_1fr_24px] sm:py-6 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-brand ${
-                activeModule === index ? "text-white" : "text-white/75"
-              }`}
-            >
-              <span className="text-[10px] tracking-[.12em] text-white/45">
-                0{index + 1}
-              </span>
-              <span
-                className={`text-base font-normal tracking-[-.02em] transition duration-300 sm:text-xl ${
-                  activeModule === index
-                    ? "translate-x-1"
-                    : "group-hover:translate-x-1"
+                onMouseEnter={() => {
+                  if (window.matchMedia("(hover: hover)").matches) {
+                    setActiveModule(index);
+                  }
+                }}
+                onFocus={() => setActiveModule(index)}
+                onClick={() => setActiveModule(index)}
+                className={`group grid w-full grid-cols-[38px_minmax(0,1fr)_20px] items-start gap-3 py-5 text-left transition-colors sm:grid-cols-[60px_minmax(0,1fr)_24px] sm:py-6 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-brand ${
+                  activeModule === index ? "text-white" : "text-white/75"
                 }`}
               >
-                {module.title}
-              </span>
-              <ArrowUpRight
-                className={`transition-colors ${
-                  activeModule === index
-                    ? "text-brand"
-                    : "text-white/50 group-hover:text-brand"
-                }`}
-                size={17}
-              />
-            </button>
+                <span className="mt-1 text-[10px] tracking-[.12em] text-white/45">
+                  0{index + 1}
+                </span>
+                <span className="min-w-0">
+                  <span
+                    className={`block text-base font-normal tracking-[-.02em] transition duration-300 sm:text-xl ${
+                      activeModule === index
+                        ? "translate-x-1"
+                        : "group-hover:translate-x-1"
+                    }`}
+                  >
+                    {module.title}
+                  </span>
+                  {activeModule === index && (
+                    <span
+                      className="mt-3 block space-y-2 text-sm leading-6 text-white/65 lg:hidden"
+                      id={`module-topics-${index}`}
+                    >
+                      {module.topics.map((topic) => (
+                        <span className="flex gap-2.5" key={topic}>
+                          <span
+                            aria-hidden="true"
+                            className="mt-2 size-1.5 shrink-0 rounded-full bg-brand"
+                          />
+                          {topic}
+                        </span>
+                      ))}
+                    </span>
+                  )}
+                </span>
+                <ChevronDown
+                  aria-hidden="true"
+                  className={`mt-1 transition-transform lg:hidden ${
+                    activeModule === index
+                      ? "rotate-180 text-brand"
+                      : "text-white/50 group-hover:text-brand"
+                  }`}
+                  size={18}
+                />
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className={`mt-1 hidden transition-colors lg:block ${
+                    activeModule === index
+                      ? "text-brand"
+                      : "text-white/50 group-hover:text-brand"
+                  }`}
+                  size={17}
+                />
+              </button>
+            </div>
           ))}
         </div>
 
-        <div className="order-2 min-w-0 lg:sticky lg:top-8 lg:mt-2 lg:self-start">
+        <div className="order-2 hidden min-w-0 lg:sticky lg:top-8 lg:mt-2 lg:block lg:self-start">
           <div
             className="relative min-h-[270px] overflow-hidden rounded-[18px] bg-white/5 sm:min-h-[360px] lg:h-[350px]"
             aria-live="polite"
@@ -184,7 +217,7 @@ export default function ProgramSection() {
                 +
               </span>
             </summary>
-            <ul className="mt-3 space-y-2 text-sm leading-6 text-white/65">
+            <ul className="mt-3 hidden space-y-2 text-sm leading-6 text-white/65 lg:block">
               {active.topics.map((topic) => (
                 <li className="flex gap-2.5" key={topic}>
                   <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-brand" />

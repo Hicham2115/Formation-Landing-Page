@@ -15,10 +15,14 @@ export default function Hero() {
         data-no-reveal
       >
         <div className="flex min-w-0 flex-col justify-center px-7 py-12 sm:px-12 lg:px-16 lg:py-16">
-          <p className="mb-8 inline-flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full border border-white/15 bg-white/[.04] px-3.5 py-2 text-[9px] font-bold uppercase tracking-[.12em] text-white sm:gap-2.5 sm:tracking-[.2em] motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
+          <p className="mb-8 inline-flex w-fit max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-white/[.04] px-2.5 py-2 text-[8px] font-bold uppercase tracking-[.08em] text-white sm:gap-2.5 sm:px-3.5 sm:text-[9px] sm:tracking-[.2em] motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
             <span className="size-1.5 rounded-full  bg-brand motion-safe:animate-[pulse-dot_2.2s_ease-in-out_infinite]" />
-            Formation pour les professionnels de santé{" "}
-            <span className="text-white/30">·</span> Mohammedia
+            <span className="sm:hidden">Formation santé</span>
+            <span className="hidden sm:inline">
+              Formation pour les professionnels de santé
+            </span>
+            <span className="text-white/30">·</span>
+            Mohammedia
           </p>
           <h1 className="max-w-[650px] text-[clamp(2.2rem,4.8vw,5.3rem)] font-medium leading-[.96] tracking-[-.075em]">
             <span className="block overflow-hidden pb-[.08em]">
