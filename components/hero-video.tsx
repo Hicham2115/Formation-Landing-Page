@@ -7,19 +7,17 @@ export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const [needsPlay, setNeedsPlay] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Try audible autoplay first. Browsers that block it show a user-gesture control.
+    // Try audible autoplay first; the bottom playback control remains available if blocked.
     void video.play().then(
       () => {
         setIsPlaying(true);
-        setNeedsPlay(false);
       },
-      () => setNeedsPlay(true),
+      () => setIsPlaying(false),
     );
   }, []);
 
@@ -36,9 +34,8 @@ export default function HeroVideo() {
     try {
       await video.play();
       setIsPlaying(true);
-      setNeedsPlay(false);
     } catch {
-      setNeedsPlay(true);
+      setIsPlaying(false);
     }
   }
 
@@ -61,26 +58,13 @@ export default function HeroVideo() {
         playsInline
         poster="/images/laser-ear-detail.jpg"
         preload="metadata"
-        onError={() => {
-          setIsPlaying(false);
-          setNeedsPlay(true);
-        }}
+        onError={() => setIsPlaying(false)}
         onPause={() => setIsPlaying(false)}
         onPlay={() => setIsPlaying(true)}
       >
         <source src="/addics-laser-hero-optimized.mp4" type="video/mp4" />
         Votre navigateur ne prend pas en charge la lecture vidéo.
       </video>
-      {needsPlay && (
-        <button
-          aria-label="Lire la vidéo avec le son"
-          className="absolute inset-0 m-auto flex size-16 items-center justify-center rounded-full bg-brand text-white shadow-lg transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-          onClick={togglePlayback}
-          type="button"
-        >
-          <Play aria-hidden="true" fill="currentColor" size={24} />
-        </button>
-      )}
       <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/75 to-transparent px-4 pb-4 pt-10 opacity-100 transition-opacity sm:opacity-0 sm:group-hover:opacity-100 sm:focus-within:opacity-100">
         <button
           aria-label={isPlaying ? "Mettre la vidéo en pause" : "Lire la vidéo"}
