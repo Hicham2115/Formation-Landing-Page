@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import HeroVideo from "@/components/hero-video";
 import { SPOTS_LEFT } from "@/lib/site";
 
 export default function Hero() {
@@ -13,7 +13,9 @@ export default function Hero() {
         <div className="flex min-w-0 flex-col justify-center px-7 py-12 sm:px-12 lg:px-16 lg:py-16">
           <p className="mb-8 inline-flex w-fit max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-white/[.04] px-2.5 py-2 text-[8px] font-bold uppercase tracking-[.08em] text-white sm:gap-2.5 sm:px-3.5 sm:text-[9px] sm:tracking-[.2em] motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
             <span className="size-1.5 rounded-full  bg-brand motion-safe:animate-[pulse-dot_2.2s_ease-in-out_infinite]" />
-            <span className="sm:hidden">Formation pro · Mohammedia · 31 oct.</span>
+            <span className="sm:hidden">
+              Formation pro · Mohammedia · 31 oct.
+            </span>
             <span className="hidden sm:inline">
               Formation professionnelle · Mohammedia · Samedi 31 octobre 2026
             </span>
@@ -31,9 +33,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-7 max-w-lg text-[15px] leading-7 text-white/90 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:540ms] sm:text-base">
-            Une journée pour maîtriser une approche sans aiguilles qui accompagne
-            vos patients (tabac, poids, stress, sommeil, douleurs). La formation
-            comprend un laser professionnel de classe 3R.
+            Une journée pour maîtriser une approche sans aiguilles qui
+            accompagne vos patients (tabac, poids, stress, sommeil, douleurs).
+            La formation comprend un laser professionnel de classe 3R.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:640ms]">
             <a
@@ -51,27 +53,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="group relative min-h-[390px] min-w-0 overflow-hidden motion-safe:animate-[soft-rise_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:120ms] lg:min-h-full">
-          <Image
-            src="/images/siham-boulla-hero.jpg"
-            alt="Siham Boulla, formatrice, dans son cabinet"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 45vw"
-            className="object-cover object-[center_38%] transition-transform duration-700  motion-reduce:transition-none"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/5" />
-          <div className="absolute bottom-7 left-7 text-white sm:bottom-9 sm:left-9">
-            <span className="inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[.24em] text-white/75">
-              <span className="size-1.5 rounded-full bg-brand" /> Avec
-            </span>
-            <strong className="mt-2 block text-2xl font-semibold tracking-[-.045em] drop-shadow-sm sm:text-[28px]">
-              Siham Boulla
-            </strong>
-            <span className="mt-2 inline-flex items-center gap-2 text-xs font-medium tracking-[.025em] text-white/80 sm:text-sm">
-              <span className="h-px w-5 bg-brand" />
-              Psychothérapeute & formatrice
-            </span>
-          </div>
+          <HeroVideo />
         </div>
       </section>
 

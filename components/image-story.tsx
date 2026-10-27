@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const images = [
   {
-    src: "/images/auriculotherapy-workshop.jpg",
-    alt: "Atelier de formation en petit groupe autour de l’auriculothérapie",
-    caption: "APPRENDRE ENSEMBLE",
+    src: "/transfer-01a17ab0/ADDICS%20LASER3.png",
+    alt: "Pointe du laser rouge appliquée sur un point auriculaire",
+    caption: "LE POINT DE STIMULATION",
   },
   {
-    src: "/images/laser-ear-detail.jpg",
-    alt: "Démonstration d’un appareil de bio-stimulation laser près de l’oreille",
-    caption: "AU CŒUR DE LA MÉTHODE",
+    src: "/transfer-01a17ab0/ADDICS%20LASER6.png",
+    alt: "Démonstration du laser Addic sur l’oreille, appareil tenu à la main",
+    caption: "LE GESTE DU PRATICIEN",
   },
   {
-    src: "/images/siham-boulla-portrait.jpg",
-    alt: "Portrait de Siham Boulla, formatrice",
-    caption: "VOTRE FORMATRICE",
+    src: "/transfer-01a17ab0/ADDICS%20LASER8.png",
+    alt: "Le faisceau rouge du laser posé sur un point de l’oreille",
+    caption: "LA LUMIÈRE SUR L’OREILLE",
   },
 ];
 

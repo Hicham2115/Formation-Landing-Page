@@ -6,7 +6,7 @@ import { COURSE_PRICE } from "@/lib/site";
 const currency = new Intl.NumberFormat("fr-MA", { maximumFractionDigits: 0 });
 
 export default function ProfitabilitySimulator() {
-  const [sessionPrice, setSessionPrice] = useState(500);
+  const [sessionPrice, setSessionPrice] = useState(1500);
   const [sessionsPerWeek, setSessionsPerWeek] = useState(5);
   const sessionsToBreakEven = Math.ceil(COURSE_PRICE / sessionPrice);
   const weeksToBreakEven = Math.ceil(sessionsToBreakEven / sessionsPerWeek);
@@ -46,15 +46,15 @@ export default function ProfitabilitySimulator() {
             <input
               className="mt-4 w-full accent-brand"
               type="range"
-              min="200"
-              max="1500"
+              min="1500"
+              max="1700"
               step="50"
               value={sessionPrice}
               onChange={(event) => setSessionPrice(Number(event.target.value))}
               aria-label="Prix de votre séance en dirhams"
             />
             <span className="mt-1 flex justify-between text-xs text-neutral-500">
-              <span>200 DH</span><span>1 500 DH</span>
+              <span>1 500 DH</span><span>1 700 DH</span>
             </span>
           </label>
           <label className="block">

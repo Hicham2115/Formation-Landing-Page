@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const specifications = [
   ["Type d’appareil", "Laser manuel de classe 3R"],
   ["Protection", "Alimentation interne"],
@@ -44,6 +46,28 @@ export default function DeviceOverview() {
           Repères concrets sur le dispositif présenté pendant la journée et les
           applications intégrées au programme.
         </p>
+      </div>
+
+      <div className="mb-5 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4" aria-label="Détails de l’appareil laser Addic">
+        {[
+          ["ADDICS LASER1.png", "Détail du manche du laser Addic tenu en main", "LE MANCHE"],
+          ["ADDICS LASER2.png", "Vue du laser Addic tenu par la formatrice", "LA PRISE EN MAIN"],
+          ["ADDICS LASER4.png", "Laser Addic guidé vers un point de l’oreille", "LE POSITIONNEMENT"],
+          ["ADDICS LASER9.png", "Gros plan sur l’appareil laser Addic", "L’APPAREIL"],
+        ].map(([file, alt, caption]) => (
+          <figure className="relative h-40 overflow-hidden rounded-[16px] bg-white sm:h-56 lg:h-64" key={file}>
+            <Image
+              src={`/transfer-01a17ab0/${file.replaceAll(" ", "%20")}`}
+              alt={alt}
+              fill
+              sizes="(max-width: 640px) 33vw, 30vw"
+              className="object-cover object-center"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-3 pb-3 pt-8 text-[9px] font-semibold tracking-[.14em] text-white sm:px-4 sm:pb-4">
+              {caption}
+            </figcaption>
+          </figure>
+        ))}
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[.72fr_1.28fr] lg:gap-6">

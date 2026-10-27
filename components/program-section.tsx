@@ -63,8 +63,8 @@ const modules = [
   },
   {
     title: "Utilisation de la bio-stimulation laser",
-    image: "/images/programme-laser.jpg",
-    alt: "Appareil laser posé près d’un schéma de l’oreille",
+    image: "/transfer-01a17ab0/ADDICS%20LASER7.png",
+    alt: "Démonstration rapprochée du laser Addic sur l’oreille",
     caption: "Voir le geste",
     topics: [
       "Principes de traitement et régulation naturelle",
