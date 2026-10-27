@@ -15,6 +15,11 @@ export default function HeroVideo() {
 
     let isMounted = true;
     video.muted = true;
+    setShowControls(window.matchMedia("(hover: none)").matches);
+    video.src = window.matchMedia("(max-width: 767px)").matches
+      ? "/ADDICS%20LASER%20-%20MONTAGE%20-%20mobile.mp4"
+      : "/ADDICS%20LASER%20-%20MONTAGE%20.mp4";
+    video.load();
 
     video.play().catch(() => {
       if (isMounted) setIsPlaying(false);
@@ -80,9 +85,7 @@ export default function HeroVideo() {
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onClick={handleVideoClick}
-      >
-        <source src="/ADDICS%20LASER%20-%20MONTAGE%20.mp4" type="video/mp4" />
-      </video>
+      />
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/5" />
 
