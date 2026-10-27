@@ -29,11 +29,11 @@ export default function MobileMenu() {
       <SheetContent
         side="right"
         showCloseButton
-        className="w-[min(88vw,420px)] gap-0 border-l border-divider bg-white p-0 text-ink sm:max-w-[420px]"
+        className="h-dvh w-[min(100vw,420px)] max-w-none gap-0 overflow-y-auto border-l border-divider bg-white p-0 text-ink sm:max-w-[420px]"
       >
-        <div className="flex min-h-full flex-col">
-          <SheetHeader className="border-b border-divider px-7 pb-7 pt-8 sm:px-9 sm:pt-10">
-            <BrandLockup className="mb-10" />
+        <div className="flex min-h-dvh flex-col">
+          <SheetHeader className="border-b border-divider px-6 pb-5 pt-[max(1.5rem,env(safe-area-inset-top))] pr-16 sm:px-9 sm:pb-7 sm:pt-10 sm:pr-16">
+            <BrandLockup className="mb-6" />
             <p className="mb-2 text-[10px] font-semibold uppercase tracking-[.2em] text-brand">
               Menu
             </p>
@@ -45,13 +45,13 @@ export default function MobileMenu() {
             </SheetDescription>
           </SheetHeader>
 
-          <nav className="px-7 py-5 sm:px-9" aria-label="Navigation mobile">
+          <nav className="px-6 py-3 sm:px-9 sm:py-5" aria-label="Navigation mobile">
             {navigationLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="group flex min-h-[68px] items-center justify-between border-b border-divider text-[17px] font-medium tracking-[-.02em] transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                className="group flex min-h-[60px] items-center justify-between border-b border-divider text-[17px] font-medium tracking-[-.02em] transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <span className="flex items-center gap-4">
                   <span className="font-mono text-[10px] tracking-wide text-neutral-400">
@@ -68,7 +68,7 @@ export default function MobileMenu() {
             ))}
           </nav>
 
-          <div className="mt-auto bg-[#f7f7f6] px-7 py-7 sm:px-9 sm:py-8">
+          <div className="mt-auto bg-[#f7f7f6] px-6 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-9 sm:py-8">
             <p className="mb-4 text-xs leading-5 text-neutral-500">
               Prête à vous lancer ? Échangeons sur votre projet.
             </p>
