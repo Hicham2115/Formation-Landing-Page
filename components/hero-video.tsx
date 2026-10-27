@@ -41,6 +41,17 @@ export default function HeroVideo() {
     video.pause();
   }
 
+  function handleVideoClick() {
+    setShowControls(true);
+
+    const video = videoRef.current;
+    if (!video?.paused) return;
+
+    video.play().catch(() => {
+      setIsPlaying(false);
+    });
+  }
+
   function toggleMute() {
     const video = videoRef.current;
     if (!video) return;
@@ -67,7 +78,7 @@ export default function HeroVideo() {
         aria-label="Montage vidéo montrant le laser Addic et son application sur l’oreille"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
-        onClick={() => setShowControls(true)}
+        onClick={handleVideoClick}
       >
         <source src="/ADDICS%20LASER%20-%20MONTAGE%20.mp4" type="video/mp4" />
       </video>
