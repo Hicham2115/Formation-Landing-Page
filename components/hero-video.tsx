@@ -7,6 +7,7 @@ export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -34,6 +35,7 @@ export default function HeroVideo() {
     try {
       await video.play();
       setIsPlaying(true);
+      setHasStarted(true);
     } catch {
       setIsPlaying(false);
     }
@@ -65,7 +67,13 @@ export default function HeroVideo() {
         <source src="/addics-laser-hero-optimized.mp4" type="video/mp4" />
         Votre navigateur ne prend pas en charge la lecture vidéo.
       </video>
-      <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/75 to-transparent px-4 pb-4 pt-10 opacity-100 transition-opacity sm:opacity-0 sm:group-hover:opacity-100 sm:focus-within:opacity-100">
+      {!hasStarted && !isPlaying && (
+        <div className="absolute bottom-16 left-4 z-10 rounded-md bg-black/75 px-2.5 py-1.5 text-xs font-medium text-white shadow-lg backdrop-blur-sm sm:left-6">
+          Cliquez pour lancer la vidéo
+          <span aria-hidden="true" className="absolute -bottom-1 left-4 size-2 rotate-45 bg-black/75" />
+        </div>
+      )}
+      <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/75 to-transparent px-4 pb-4 pt-10 opacity-100 transition-opacity sm:px-6">
         <button
           aria-label={isPlaying ? "Mettre la vidéo en pause" : "Lire la vidéo"}
           className="flex size-10 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur transition hover:bg-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
