@@ -68,7 +68,7 @@ export default function Hero() {
           ["INVESTISSEMENT", "22 900 DH HT · laser inclus"],
           ["PLACES", `${SPOTS_LEFT} restantes`],
         ].map(([label, value]) => (
-          <div className="bg-[#fafafa] px-4 py-5 sm:px-6 sm:py-6" key={label}>
+          <div className="bg-[#fafafa] px-4 py-5 last:col-span-2 sm:px-6 sm:py-6 sm:last:col-span-1" key={label}>
             <span className="flex items-center gap-2 text-[9px] font-semibold tracking-[.16em] text-neutral-500">
               <span className="size-1.5 rounded-full bg-brand" />
               {label}

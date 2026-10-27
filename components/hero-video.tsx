@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [showControls, setShowControls] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function HeroVideo() {
     if (!video) return;
 
     let isMounted = true;
-    video.muted = false;
+    video.muted = true;
 
     video.play().catch(() => {
       if (isMounted) setIsPlaying(false);
@@ -71,6 +71,7 @@ export default function HeroVideo() {
         ref={videoRef}
         autoPlay
         loop
+        muted
         playsInline
         preload="metadata"
         poster="/transfer-01a17ab0/ADDICS%20LASER5.png"
