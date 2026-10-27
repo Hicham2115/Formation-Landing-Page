@@ -1,2 +1,2 @@
 public/*.mp4 filter=lfs diff=lfs merge=lfs -text
-public/addics-laser-hero-optimized.mp4 -filter -diff -merge text
+public/addics-laser-hero-optimized.mp4 -filter -diff -merge -text

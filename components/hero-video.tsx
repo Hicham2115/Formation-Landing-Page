@@ -61,6 +61,10 @@ export default function HeroVideo() {
         playsInline
         poster="/images/laser-ear-detail.jpg"
         preload="metadata"
+        onError={() => {
+          setIsPlaying(false);
+          setNeedsPlay(true);
+        }}
         onPause={() => setIsPlaying(false)}
         onPlay={() => setIsPlaying(true)}
       >
