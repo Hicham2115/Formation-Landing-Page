@@ -35,7 +35,7 @@ export default function Home() {
         <ProfitabilitySimulator />
         <ImageStory />
         <TrainerSection />
-        <CompanyReferences />
+        {/* <CompanyReferences /> */}
         <RegistrationSection />
         <Faq />
         <ContactFormSection />
