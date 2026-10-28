@@ -77,7 +77,7 @@ export default function CompanyReferences() {
 
   return (
     <section
-      aria-label="Entreprises accompagnées en communication par Siham Boulla"
+      aria-label="Entreprises accompagnées en communication par Siham Boulila"
       className="overflow-hidden border-y border-dashed border-divider py-6 sm:py-8"
     >
       <div className="grid items-center gap-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-10">

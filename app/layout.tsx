@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Découvrez le programme, le matériel et les modalités de la formation professionnelle en auriculothérapie laser à Mohammedia.",
     images: [
       {
-        url: "/images/siham-boulla-hero.jpg",
+        url: "/images/siham-boulila-hero.jpg",
         width: 4240,
         height: 2832,
         alt: "Formation professionnelle Addic’s Laser en auriculothérapie laser",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Formation en auriculothérapie laser à Mohammedia | Addic’s Laser",
     description:
       "Formation professionnelle d’une journée en auriculothérapie laser à Mohammedia.",
-    images: ["/images/siham-boulla-hero.jpg"],
+    images: ["/images/siham-boulila-hero.jpg"],
   },
 };
 

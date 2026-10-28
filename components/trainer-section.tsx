@@ -16,8 +16,8 @@ export default function TrainerSection() {
     >
       <div className="group relative aspect-[4/4.6] min-w-0 overflow-hidden rounded-[24px] bg-secondary">
         <Image
-          src="/images/siham-boulla-profile.jpg"
-          alt="Portrait de Siham Boulla dans son cabinet"
+          src="/images/siham-boulila-profile.jpg"
+          alt="Portrait de Siham Boulila dans son cabinet"
           fill
           sizes="(max-width: 1024px) 100vw, 48vw"
           className="object-cover object-[center_34%] transition-transform duration-700 group-hover:scale-[1.025] motion-reduce:transition-none"
@@ -30,7 +30,7 @@ export default function TrainerSection() {
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white sm:p-8">
           <div>
             <p className="text-2xl font-medium tracking-[-.045em] sm:text-3xl">
-              Siham Boulla
+              Siham Boulila
             </p>
             <p className="mt-1 text-xs text-white/75 sm:text-sm">
               Psychothérapeute & formatrice
@@ -51,7 +51,7 @@ export default function TrainerSection() {
         <div className="mt-7 max-w-2xl space-y-4 text-base leading-7 text-ink sm:mt-8 sm:text-[17px] sm:leading-8">
           <p>
             Psychothérapeute, formatrice et fondatrice de Full International
-            Academy, Siham Boulla anime cette journée autour de la réflexologie
+            Academy, Siham Boulila anime cette journée autour de la réflexologie
             auriculaire et de la bio-stimulation laser. Son parcours associe
             psychothérapie, formation et approches intégratives.
           </p>
