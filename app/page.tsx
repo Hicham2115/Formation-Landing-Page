@@ -42,6 +42,6 @@ export default function Home() {
         <ContactSection />
       </main>
       <SiteFooter />
-    </div>
+    </div> 
   );
 }
