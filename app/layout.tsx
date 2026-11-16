@@ -20,10 +20,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.addicslaser.com"),
-  title: "Formation en auriculothérapie laser à Mohammedia | Addic’s Laser",
+  title: "Formation auriculothérapie laser | Full International Academy",
   description:
     "Formation professionnelle d’une journée en auriculothérapie laser à Mohammedia : programme, matériel, tarif, formatrice et inscription.",
-  applicationName: "Addic’s Laser",
+  applicationName: "Full International Academy",
   keywords: [
     "formation auriculothérapie laser",
     "formation laser auriculaire Maroc",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_MA",
     url: "https://www.addicslaser.com/",
-    siteName: "Addic’s Laser",
-    title: "Formation en auriculothérapie laser à Mohammedia | Addic’s Laser",
+    siteName: "Full International Academy",
+    title: "Formation auriculothérapie laser | Full International Academy",
     description:
       "Découvrez le programme, le matériel et les modalités de la formation professionnelle en auriculothérapie laser à Mohammedia.",
     images: [
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
         url: "/images/siham-boulila-hero.jpg",
         width: 4240,
         height: 2832,
-        alt: "Formation professionnelle Addic’s Laser en auriculothérapie laser",
+        alt: "Formation professionnelle Full International Academy en auriculothérapie laser",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Formation en auriculothérapie laser à Mohammedia | Addic’s Laser",
+    title: "Formation auriculothérapie laser | Full International Academy",
     description:
       "Formation professionnelle d’une journée en auriculothérapie laser à Mohammedia.",
     images: ["/images/siham-boulila-hero.jpg"],

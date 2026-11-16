@@ -16,18 +16,18 @@ const facts = [
     detail: "Des bases théoriques jusqu’aux protocoles présentés.",
   },
   {
-    value: "675–695",
-    accessibleValue: "675–695 nm",
-    unit: "nm",
-    title: "Longueur d’onde",
-    detail: "Plage de longueur d’onde de l’appareil laser.",
+    value: "3 000",
+    accessibleValue: "3 000 dirhams HT",
+    unit: "DH HT",
+    title: "Tarif de la formation",
+    detail: "Déjeuner, certificat, supervision et suivi inclus.",
   },
   {
-    value: "2",
-    accessibleValue: "2 ans",
-    unit: "ans",
-    title: "Garantie de l’appareil",
-    detail: "Garantie de l’appareil à compter de la date d’achat.",
+    value: "1",
+    accessibleValue: "1 certificat",
+    unit: "",
+    title: "Certificat international",
+    detail: "Certificat de formation associé à IPHM et CIRET-TP, selon la brochure.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function CourseFacts() {
               <p
                 aria-label={fact.accessibleValue}
                 className={`whitespace-nowrap font-medium leading-[.9] tracking-[-.08em] ${
-                  fact.title === "Longueur d’onde"
+                  fact.title === "Tarif de la formation"
                     ? "text-[clamp(2rem,4vw,4rem)]"
                     : "text-[clamp(3rem,7vw,7rem)]"
                 }`}

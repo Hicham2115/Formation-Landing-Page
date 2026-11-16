@@ -14,28 +14,28 @@ export default function Hero() {
           <p className="mb-8 inline-flex w-fit max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-white/[.04] px-2.5 py-2 text-[8px] font-bold uppercase tracking-[.08em] text-white sm:gap-2.5 sm:px-3.5 sm:text-[9px] sm:tracking-[.2em] motion-safe:animate-[soft-rise_.65s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:80ms]">
             <span className="size-1.5 rounded-full  bg-brand motion-safe:animate-[pulse-dot_2.2s_ease-in-out_infinite]" />
             <span className="sm:hidden">
-              Formation pro · Mohammedia · 31 oct.
+              Prochaine master class · 28 nov.
             </span>
             <span className="hidden sm:inline">
-              Formation professionnelle · Mohammedia · Samedi 31 octobre 2026
+              Prochaine master class · Mohammedia · Samedi 28 novembre 2026
             </span>
           </p>
           <h1 className="max-w-[650px] text-[clamp(2rem,4.8vw,5.3rem)] font-medium leading-[.96] tracking-[-.075em]">
             <span className="block overflow-hidden pb-[.08em]">
               <span className="inline-block whitespace-nowrap motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:160ms]">
-                Ajoutez le laser
+                Maîtrisez l’auriculothérapie
               </span>
             </span>
             <span className="block overflow-hidden pb-[.08em]">
               <span className="inline-block pr-2 font-normal  text-brand motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:300ms]">
-                à votre cabinet.
+                en une journée.
               </span>
             </span>
           </h1>
           <p className="mt-7 max-w-lg text-[15px] leading-7 text-white/90 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:540ms] sm:text-base">
             Une journée pour maîtriser une approche sans aiguilles qui
             accompagne vos patients (tabac, poids, stress, sommeil, douleurs).
-            La formation comprend un laser professionnel de classe 3R.
+            Formation pratique, accessible aux professionnels de santé et du bien-être.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:640ms]">
             <a
@@ -46,9 +46,9 @@ export default function Hero() {
             </a>
             <a
               className="inline-flex items-center gap-2 text-sm text-white transition duration-300 hover:text-white/80"
-              href="#rentabilite"
+              href="#programme"
             >
-              Calculer ma rentabilité <ArrowUpRight size={15} />
+              Voir le programme <ArrowUpRight size={15} />
             </a>
           </div>
         </div>
@@ -63,9 +63,9 @@ export default function Hero() {
       >
         {[
           ["FORMAT", "1 journée"],
-          ["DATE", "31.10.2026"],
+          ["DATE", "28.11.2026"],
           ["LIEU", "Mohammedia"],
-          ["INVESTISSEMENT", "22 900 DH HT · laser inclus"],
+          ["INVESTISSEMENT", "3 000 DH HT"],
           ["PLACES", `${SPOTS_LEFT} restantes`],
         ].map(([label, value]) => (
           <div className="bg-[#fafafa] px-4 py-5 last:col-span-2 sm:px-6 sm:py-6 sm:last:col-span-1" key={label}>

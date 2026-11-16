@@ -4,16 +4,17 @@ import ContactFormSection from "@/components/contact-form-section";
 import CourseFacts from "@/components/course-facts";
 import CourseDetails from "@/components/course-details";
 import CourseIntro from "@/components/course-intro";
-import DeviceOverview from "@/components/device-overview";
+// import DeviceOverview from "@/components/device-overview";
 import Faq from "@/components/faq";
 import Hero from "@/components/hero";
 import ImageStory from "@/components/image-story";
 import MidPageCta from "@/components/mid-page-cta";
-import ProfitabilitySimulator from "@/components/profitability-simulator";
+// import ProfitabilitySimulator from "@/components/profitability-simulator";
 import ProgramSection from "@/components/program-section";
 import RegistrationSection from "@/components/registration-section";
 import SiteFooter from "@/components/site-footer";
 import StickyUrgencyBar from "@/components/sticky-urgency-bar";
+import TestimonialsSection from "@/components/testimonials-section";
 import TrainerSection from "@/components/trainer-section";
 import WhyIntegrateSection from "@/components/why-integrate-section";
 import Header from "@/layout/header";
@@ -31,10 +32,12 @@ export default function Home() {
         <CourseDetails />
         <MidPageCta />
         <ProgramSection />
-        <DeviceOverview />
-        <ProfitabilitySimulator />
+        {/* Hidden: focuses on the laser device / sale, not the formation */}
+        {/* <DeviceOverview /> */}
+        {/* <ProfitabilitySimulator /> */}
         <ImageStory />
         <TrainerSection />
+        <TestimonialsSection />
         {/* <CompanyReferences /> */}
         <RegistrationSection />
         <Faq />

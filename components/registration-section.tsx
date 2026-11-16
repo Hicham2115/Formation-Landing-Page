@@ -17,26 +17,26 @@ export default function RegistrationSection() {
       >
         <div className="min-w-0">
           <p className="mb-5 flex items-center gap-2 text-[11px] font-semibold tracking-[.16em] text-white/60">
-            <span className="h-px w-5 bg-brand" /> SESSION DU 31 OCTOBRE
+            <span className="h-px w-5 bg-brand" /> PROCHAINE MASTER CLASS · 28 NOVEMBRE
           </p>
           <h2 className="max-w-lg text-4xl font-medium leading-[1.04] tracking-[-.065em] sm:text-6xl">
-            Intégrez le laser auriculaire à votre cabinet.
+            Devenez praticien·ne en auriculothérapie laser.
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-7 text-white/75">
-            Une journée de formation professionnelle à Mohammedia, le samedi 31
-            octobre 2026.
+            Une journée de formation professionnelle à Mohammedia, le samedi 28
+            novembre 2026.
           </p>
           <div className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
             <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/5 p-4">
               <span className="grid size-10 shrink-0 place-items-center rounded-[11px] bg-brand text-base font-semibold text-white">
-                31
+                28
               </span>
               <span>
                 <span className="block text-[10px] font-semibold tracking-[.12em] text-white/60">
                   SAMEDI
                 </span>
                 <span className="mt-1 block font-medium text-white">
-                  Octobre 2026
+                  Novembre 2026
                 </span>
               </span>
             </div>
@@ -69,7 +69,7 @@ export default function RegistrationSection() {
               </span>
             </div>
             <span className="rounded-xl bg-brand px-3 py-2 text-[10px] font-semibold tracking-[.08em] text-white sm:text-xs">
-              31 OCTOBRE
+              28 NOVEMBRE
             </span>
           </div>
           <div className="mt-7 space-y-0 text-sm text-ink">
@@ -77,18 +77,11 @@ export default function RegistrationSection() {
               <span className="max-w-[72%] leading-6">Formation · 1 journée, déjeuner, certificat international, supervision et suivi</span>
               <strong className="shrink-0">3 000 DH HT</strong>
             </div>
-            <div className="flex items-start justify-between gap-4 border-t border-divider py-4">
-              <span className="max-w-[72%] leading-6">Laser professionnel classe 3R · garantie 2 ans</span>
-              <strong className="shrink-0">19 900 DH HT</strong>
-            </div>
             <div className="flex items-center justify-between gap-4 border-y-2 border-ink py-4 text-base">
               <strong>TOTAL</strong>
               <strong>{new Intl.NumberFormat("fr-MA").format(COURSE_PRICE)} DH HT</strong>
             </div>
           </div>
-          <p className="mt-4 text-sm leading-6 text-neutral-600">
-            Le laser vous appartient et reste dans votre cabinet.
-          </p>
           <ul className="my-6 space-y-3 text-sm leading-6 text-ink">
             <li className="flex items-center gap-3">
               <Clock3 size={18} strokeWidth={1.7} /> Formation sur une journée

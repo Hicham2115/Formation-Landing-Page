@@ -32,7 +32,7 @@ export default function SiteFooter() {
               <a
                 className="inline-flex rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
                 href="#top"
-                aria-label="Addic’s Laser, accueil"
+                aria-label="Full International Academy, accueil"
               >
                 <BrandLockup inverse />
               </a>
@@ -79,7 +79,7 @@ export default function SiteFooter() {
           </div>
 
           <div className="mt-10 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-white sm:flex-row sm:items-center sm:justify-between">
-            <span>© <CurrentYear /> Addic’s Laser · Full International Academy</span>
+            <span>© <CurrentYear /> Full International Academy</span>
             <a
               className="w-fit underline decoration-transparent underline-offset-4 transition-colors hover:text-brand hover:decoration-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
               href="#top"

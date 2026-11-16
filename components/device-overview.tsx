@@ -1,3 +1,8 @@
+/**
+ * NOT USED: this component promotes the laser device, not the formation.
+ * The landing page must focus on the formation (3 000 DH HT) to get clients;
+ * the laser is presented to them afterwards. Re-enable in app/page.tsx only if that changes.
+ */
 import Image from "next/image";
 
 const specifications = [

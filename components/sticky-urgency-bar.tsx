@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { SPOTS_LEFT } from "@/lib/site";
 
-const closingTime = Date.parse("2026-10-30T18:00:00+01:00");
+const closingTime = Date.parse("2026-11-27T18:00:00+01:00");
 
 function countdownParts(milliseconds: number) {
   const totalSeconds = Math.floor(milliseconds / 1000);
@@ -35,7 +35,7 @@ export default function StickyUrgencyBar() {
         {complete ? (
           <>
             <span>
-              Session du 31 octobre complète — inscrivez-vous sur la liste
+              Session du 28 novembre complète — inscrivez-vous sur la liste
               d’attente de la prochaine session
             </span>
             <a
@@ -54,7 +54,7 @@ export default function StickyUrgencyBar() {
                   {String(time.days).padStart(2, "0")}j {String(time.hours).padStart(2, "0")}h {String(time.minutes).padStart(2, "0")}m {String(time.seconds).padStart(2, "0")}s
                 </span>
               ) : (
-                <span>le 30 octobre à 18 h</span>
+                <span>le 27 novembre à 18 h</span>
               )}
               <span className="mx-2 text-white/60">·</span>
               Plus que {SPOTS_LEFT} places pour compléter le groupe

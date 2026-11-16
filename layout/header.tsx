@@ -6,7 +6,7 @@ import { navigationLinks } from "@/layout/navigation-links";
 export default function Header() {
   return (
     <header className="relative z-10 flex items-center justify-between gap-4 py-3 sm:py-4">
-      <a href="#top" aria-label="Addic’s Laser, accueil">
+      <a className="pl-3 sm:pl-6" href="#top" aria-label="Full International Academy, accueil">
         <BrandLockup />
       </a>
       <nav

@@ -3,16 +3,8 @@ import Label from "@/components/section-label";
 
 const faqs = [
   [
-    "Le laser est-il compris ?",
-    "Oui. Le tarif de 22 900 DH HT comprend la formation (3 000 DH HT) et le laser professionnel (19 900 DH HT), garanti 2 ans.",
-  ],
-  [
-    "Puis-je suivre la formation sans acheter le laser ?",
-    "Contactez l’équipe pour confirmer les conditions de participation sans achat de l’appareil.",
-  ],
-  [
-    "En combien de temps l’investissement est-il amorti ?",
-    "Cela dépend de votre tarif et de votre volume. Utilisez notre simulateur de rentabilité pour obtenir une estimation indicative.",
+    "Quel est le tarif de la formation ?",
+    "Le tarif est de 3 000 DH HT. Il comprend la journée de formation, le déjeuner, le certificat, la supervision et le suivi.",
   ],
   [
     "Comment se passe le paiement ?",
@@ -28,7 +20,7 @@ const faqs = [
   ],
   [
     "Quand et où aura lieu la session ?",
-    "La session se tient le samedi 31 octobre 2026 au YATCH CLUB DE MOHAMMEDIA, 28800 Mohammedia.",
+    "La session se tient le samedi 28 novembre 2026 au YATCH CLUB DE MOHAMMEDIA, 28800 Mohammedia.",
   ],
 ];
 

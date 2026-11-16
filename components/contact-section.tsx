@@ -12,7 +12,7 @@ export default function ContactSection() {
             PLUS QUE {SPOTS_LEFT} PLACES
           </div>
           <h2 className="max-w-5xl text-4xl font-medium leading-[1.02] tracking-[-.065em] sm:text-6xl lg:text-7xl">
-            Plus que {SPOTS_LEFT} places pour compléter le groupe du 31 octobre.
+            Plus que {SPOTS_LEFT} places pour compléter le groupe du 28 novembre.
           </h2>
           <p className="mt-6 max-w-2xl text-sm leading-7 text-white/65 sm:text-lg sm:leading-8">
             Intégrez le laser auriculaire à votre pratique et préparez une
@@ -33,10 +33,10 @@ export default function ContactSection() {
         </div>
         <div className="relative flex size-36 shrink-0 flex-col items-center justify-center justify-self-center rounded-full border border-white/20 text-center before:absolute before:inset-2 before:rounded-full before:border before:border-white/10 sm:size-44 lg:size-52">
           <span className="text-5xl font-medium tracking-[-.08em] sm:text-6xl lg:text-7xl">
-            31
+            28
           </span>
           <span className="mt-1 text-[11px] font-medium tracking-[.2em] text-white/80">
-            OCTOBRE
+            NOVEMBRE
           </span>
           <span className="mt-2 text-[8px] tracking-[.2em] text-white/50">
             MOHAMMEDIA
