@@ -19,7 +19,7 @@ export default function Hero() {
               Prochaine master class · Mohammedia · Samedi 28 novembre 2026
             </span>
           </p>
-          <h1 className="max-w-[650px] text-[clamp(2rem,4.8vw,5.3rem)] font-medium leading-[.96] tracking-[-.075em]">
+          <h1 className="max-w-[650px] text-[clamp(2rem,4.8vw,5.3rem)] font-medium lg:max-w-none lg:text-[clamp(2rem,3.6vw,3.6rem)] leading-[.96] tracking-[-.075em]">
             <span className="block overflow-hidden pb-[.08em]">
               <span className="inline-block whitespace-nowrap motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:160ms]">
                 Maîtrisez l’auriculothérapie
