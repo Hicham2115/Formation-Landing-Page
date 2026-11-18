@@ -1,7 +1,14 @@
 "use client";
 
 import { useForm } from "@tanstack/react-form";
-import { AlertCircle, ArrowUpRight, CheckCircle2, MapPin, Phone, X } from "lucide-react";
+import {
+  AlertCircle,
+  ArrowUpRight,
+  CheckCircle2,
+  MapPin,
+  Phone,
+  X,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import Label from "@/components/section-label";
 import {
@@ -56,7 +63,9 @@ export default function ContactFormSection() {
       email: "",
     },
     onSubmit: async ({ value }) => {
-      const waitingList = new URLSearchParams(window.location.search).get("intent") === "waitlist";
+      const waitingList =
+        new URLSearchParams(window.location.search).get("intent") ===
+        "waitlist";
       const parsedLead = leadSchema.safeParse({
         ...value,
         intent: waitingList ? "waitlist" : "booking",
@@ -71,9 +80,13 @@ export default function ContactFormSection() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(parsedLead.data),
         });
-        const payload = (await response.json().catch(() => ({}))) as { error?: string };
+        const payload = (await response.json().catch(() => ({}))) as {
+          error?: string;
+        };
         if (!response.ok) {
-          throw new Error(payload.error ?? "Impossible d’enregistrer votre demande.");
+          throw new Error(
+            payload.error ?? "Impossible d’enregistrer votre demande.",
+          );
         }
       } catch (error) {
         setToastMessage(
@@ -109,7 +122,7 @@ export default function ContactFormSection() {
 
   return (
     <section
-      className="my-16 grid gap-8 rounded-[28px] bg-ink px-6 py-9 text-white sm:my-20 sm:px-9 sm:py-12 lg:my-24 lg:grid-cols-[.78fr_1.22fr] lg:gap-14 lg:px-14 lg:py-14"
+      className="mb-16 mt-2 grid gap-8 rounded-[28px] bg-ink px-6 py-9 text-white sm:mb-20 sm:mt-3 sm:px-9 sm:py-12 lg:mb-24 lg:mt-4 lg:grid-cols-[.78fr_1.22fr] lg:gap-14 lg:px-14 lg:py-14"
       id="contact-form"
       aria-labelledby="contact-form-title"
     >
@@ -129,7 +142,7 @@ export default function ContactFormSection() {
           href={`tel:${phone}`}
           className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-white transition hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
         >
-          <Phone size={17} className="text-brand" />
+          <Phone size={17} className="text-white" />
           Ou appelez le +212 613 755 122
         </a>
       </div>
@@ -147,12 +160,18 @@ export default function ContactFormSection() {
           <form.Field
             name="name"
             validators={{
-              onSubmit: ({ value }) => nameSchema.safeParse(value).success ? undefined : "Indiquez votre nom (2 caractères minimum).",
+              onSubmit: ({ value }) =>
+                nameSchema.safeParse(value).success
+                  ? undefined
+                  : "Indiquez votre nom (2 caractères minimum).",
             }}
           >
             {(field) => (
               <div>
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                <label
+                  className="text-[13px] font-medium text-white/90"
+                  htmlFor={field.name}
+                >
                   Nom complet <span className="text-brand">*</span>
                 </label>
                 <input
@@ -175,12 +194,18 @@ export default function ContactFormSection() {
           <form.Field
             name="profession"
             validators={{
-              onSubmit: ({ value }) => professionSchema.safeParse(value).success ? undefined : "Indiquez votre profession.",
+              onSubmit: ({ value }) =>
+                professionSchema.safeParse(value).success
+                  ? undefined
+                  : "Indiquez votre profession.",
             }}
           >
             {(field) => (
               <div className="sm:col-span-2">
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                <label
+                  className="text-[13px] font-medium text-white/90"
+                  htmlFor={field.name}
+                >
                   Profession <span className="text-brand">*</span>
                 </label>
                 <input
@@ -203,12 +228,18 @@ export default function ContactFormSection() {
           <form.Field
             name="city"
             validators={{
-              onSubmit: ({ value }) => citySchema.safeParse(value).success ? undefined : "Indiquez votre ville.",
+              onSubmit: ({ value }) =>
+                citySchema.safeParse(value).success
+                  ? undefined
+                  : "Indiquez votre ville.",
             }}
           >
             {(field) => (
               <div>
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                <label
+                  className="text-[13px] font-medium text-white/90"
+                  htmlFor={field.name}
+                >
                   Ville <span className="text-brand">*</span>
                 </label>
                 <input
@@ -230,12 +261,18 @@ export default function ContactFormSection() {
           <form.Field
             name="organization"
             validators={{
-              onSubmit: ({ value }) => organizationSchema.safeParse(value).success ? undefined : "Indiquez votre cabinet ou centre.",
+              onSubmit: ({ value }) =>
+                organizationSchema.safeParse(value).success
+                  ? undefined
+                  : "Indiquez votre cabinet ou centre.",
             }}
           >
             {(field) => (
               <div>
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                <label
+                  className="text-[13px] font-medium text-white/90"
+                  htmlFor={field.name}
+                >
                   Cabinet / centre <span className="text-brand">*</span>
                 </label>
                 <input
@@ -258,12 +295,18 @@ export default function ContactFormSection() {
           <form.Field
             name="whatsapp"
             validators={{
-              onSubmit: ({ value }) => phoneSchema.safeParse(value).success ? undefined : "Indiquez un numéro WhatsApp valide.",
+              onSubmit: ({ value }) =>
+                phoneSchema.safeParse(value).success
+                  ? undefined
+                  : "Indiquez un numéro WhatsApp valide.",
             }}
           >
             {(field) => (
               <div>
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
+                <label
+                  className="text-[13px] font-medium text-white/90"
+                  htmlFor={field.name}
+                >
                   Téléphone WhatsApp <span className="text-brand">*</span>
                 </label>
                 <input
@@ -287,13 +330,20 @@ export default function ContactFormSection() {
           <form.Field
             name="email"
             validators={{
-              onSubmit: ({ value }) => optionalEmailSchema.safeParse(value).success ? undefined : "Saisissez une adresse e-mail valide.",
+              onSubmit: ({ value }) =>
+                optionalEmailSchema.safeParse(value).success
+                  ? undefined
+                  : "Saisissez une adresse e-mail valide.",
             }}
           >
             {(field) => (
               <div>
-                <label className="text-[13px] font-medium text-white/90" htmlFor={field.name}>
-                  Adresse e-mail <span className="text-white/45">(facultatif)</span>
+                <label
+                  className="text-[13px] font-medium text-white/90"
+                  htmlFor={field.name}
+                >
+                  Adresse e-mail{" "}
+                  <span className="text-white/45">(facultatif)</span>
                 </label>
                 <input
                   className={fieldClassName}
@@ -315,14 +365,16 @@ export default function ContactFormSection() {
 
         <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-sm text-[13px] leading-5 text-white/60">
-            Un conseiller vous contacte sur WhatsApp pour confirmer votre place et les modalités de paiement.
+            Un conseiller vous contacte sur WhatsApp pour confirmer votre place
+            et les modalités de paiement.
           </p>
           <button
             className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-white hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Enregistrement…" : "Réserver ma place"} <ArrowUpRight size={16} />
+            {isSubmitting ? "Enregistrement…" : "Réserver ma place"}{" "}
+            <ArrowUpRight size={16} />
           </button>
         </div>
       </form>
@@ -337,8 +389,12 @@ export default function ContactFormSection() {
             <AlertCircle size={19} aria-hidden="true" />
           </span>
           <div className="min-w-0 flex-1 pt-0.5">
-            <p className="text-sm font-semibold tracking-[-.01em]">Enregistrement impossible</p>
-            <p className="mt-1 text-[13px] leading-5 text-white/70">{toastMessage}</p>
+            <p className="text-sm font-semibold tracking-[-.01em]">
+              Enregistrement impossible
+            </p>
+            <p className="mt-1 text-[13px] leading-5 text-white/70">
+              {toastMessage}
+            </p>
           </div>
           <button
             className="-mr-1 -mt-1 grid size-8 shrink-0 place-items-center rounded-full text-white/55 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
@@ -374,7 +430,7 @@ export default function ContactFormSection() {
           className="max-h-[90dvh] overflow-y-auto rounded-[28px] border border-white/10 bg-ink p-6 text-white sm:p-8"
         >
           <SheetHeader className="items-center p-0 text-center">
-            <span className="mb-2 grid size-12 place-items-center rounded-full bg-brand/15 text-brand">
+            <span className="mb-2 grid size-12 place-items-center rounded-full bg-brand/15 text-white">
               <CheckCircle2 size={25} />
             </span>
             <SheetTitle className="text-center text-2xl font-medium leading-tight tracking-[-.04em] text-white">
@@ -402,7 +458,7 @@ export default function ContactFormSection() {
       <div className="overflow-hidden rounded-[22px] border border-white/10 bg-white/[.045] lg:col-span-2">
         <div className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="flex items-center gap-3">
-            <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand/15 text-brand">
+            <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand/15 text-white">
               <MapPin size={19} />
             </span>
             <div>

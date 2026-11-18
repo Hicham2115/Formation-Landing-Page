@@ -73,7 +73,7 @@ export default function MobileMenu() {
               Prête à vous lancer ? Échangeons sur votre projet.
             </p>
             <a
-              href="#contact-form"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="flex min-h-14 items-center justify-between rounded-full bg-brand px-5 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             >

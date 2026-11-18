@@ -41,7 +41,7 @@ export default function Faq() {
           </p>
           <a
             className="mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
-            href="#contact-form"
+            href="/contact"
           >
             Parler à l’équipe <ArrowUpRight size={15} className="text-brand" />
           </a>

@@ -6,14 +6,15 @@ import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Try audible autoplay first; the bottom playback control remains available if blocked.
+    // Browsers only allow autoplay when muted; the sound button turns audio on.
+    video.muted = true;
     void video.play().then(
       () => {
         setIsPlaying(true);
@@ -55,6 +56,7 @@ export default function HeroVideo() {
         ref={videoRef}
         aria-label="ADDICS LASER - MONTAGE"
         autoPlay
+        muted
         className="size-full object-cover"
         loop
         playsInline

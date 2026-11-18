@@ -40,7 +40,7 @@ export default function StickyUrgencyBar() {
             </span>
             <a
               className="inline-flex items-center gap-1 underline underline-offset-2"
-              href="/?intent=waitlist#contact-form"
+              href="/contact?intent=waitlist"
             >
               Liste d’attente <ArrowUpRight size={14} />
             </a>
@@ -50,18 +50,16 @@ export default function StickyUrgencyBar() {
             <span>
               Inscriptions closes dans&nbsp;
               {time ? (
-                <span className="font-mono tabular-nums">
+                <span className="text-[0.93em] font-medium tabular-nums">
                   {String(time.days).padStart(2, "0")}j {String(time.hours).padStart(2, "0")}h {String(time.minutes).padStart(2, "0")}m {String(time.seconds).padStart(2, "0")}s
                 </span>
               ) : (
                 <span>le 27 novembre à 18 h</span>
               )}
-              <span className="mx-2 text-white/60">·</span>
-              Plus que {SPOTS_LEFT} places pour compléter le groupe
             </span>
             <a
               className="inline-flex items-center gap-1 underline underline-offset-2"
-              href="#contact-form"
+              href="/contact"
             >
               Réserver <ArrowUpRight size={14} />
             </a>

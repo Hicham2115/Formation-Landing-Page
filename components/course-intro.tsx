@@ -27,7 +27,7 @@ export default function CourseIntro() {
         </p>
         <a
           className="group mt-6 inline-flex items-center gap-3 text-sm font-semibold tracking-[-.02em] transition-colors hover:text-brand"
-          href="#contact-form"
+          href="/contact"
         >
           Parler à l’équipe
           <span className="grid size-10 place-items-center rounded-full border border-divider transition duration-300 group-hover:border-brand group-hover:bg-brand group-hover:text-white">

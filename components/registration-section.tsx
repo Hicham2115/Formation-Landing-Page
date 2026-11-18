@@ -6,7 +6,7 @@ import {
   MapPin,
   Utensils,
 } from "lucide-react";
-import { COURSE_PRICE, SPOTS_LEFT } from "@/lib/site";
+import { COURSE_PRICE } from "@/lib/site";
 
 export default function RegistrationSection() {
   return (
@@ -41,7 +41,7 @@ export default function RegistrationSection() {
               </span>
             </div>
             <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/5 p-4">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-white/10 text-brand">
+              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-white/10 text-white">
                 <MapPin size={17} />
               </span>
               <span>
@@ -93,12 +93,9 @@ export default function RegistrationSection() {
               <BadgeCheck size={18} strokeWidth={1.7} /> Certificat international de praticien·ne*
             </li>
           </ul>
-          <p className="mb-3 text-xs font-semibold tracking-[.08em] text-brand">
-            PLUS QUE {SPOTS_LEFT} PLACES
-          </p>
           <a
             className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-sm font-semibold text-white transition hover:bg-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:px-9"
-            href="#contact-form"
+            href="/contact"
           >
             Réserver ma place <ArrowUpRight size={16} />
           </a>

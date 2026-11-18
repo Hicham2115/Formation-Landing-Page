@@ -1,6 +1,5 @@
 import ContactSection from "@/components/contact-section";
 import CompanyReferences from "@/components/company-references";
-import ContactFormSection from "@/components/contact-form-section";
 import CourseFacts from "@/components/course-facts";
 import CourseDetails from "@/components/course-details";
 import CourseIntro from "@/components/course-intro";
@@ -12,6 +11,7 @@ import MidPageCta from "@/components/mid-page-cta";
 // import ProfitabilitySimulator from "@/components/profitability-simulator";
 import ProgramSection from "@/components/program-section";
 import RegistrationSection from "@/components/registration-section";
+import SectionContactPopup, { SectionEnd } from "@/components/section-contact-popup";
 import SiteFooter from "@/components/site-footer";
 import StickyUrgencyBar from "@/components/sticky-urgency-bar";
 import TestimonialsSection from "@/components/testimonials-section";
@@ -27,24 +27,33 @@ export default function Home() {
       <main>
         <Hero />
         <CourseFacts />
+        <SectionEnd />
         <CourseIntro />
+        <SectionEnd />
         <WhyIntegrateSection />
+        <SectionEnd />
         <CourseDetails />
+        <SectionEnd />
         <MidPageCta />
         <ProgramSection />
+        <SectionEnd />
         {/* Hidden: focuses on the laser device / sale, not the formation */}
         {/* <DeviceOverview /> */}
         {/* <ProfitabilitySimulator /> */}
         <ImageStory />
+        <SectionEnd />
         <TrainerSection />
+        <SectionEnd />
         <TestimonialsSection />
+        <SectionEnd />
         {/* <CompanyReferences /> */}
         <RegistrationSection />
+        <SectionEnd />
         <Faq />
-        <ContactFormSection />
         <ContactSection />
       </main>
       <SiteFooter />
+      <SectionContactPopup />
     </div> 
   );
 }

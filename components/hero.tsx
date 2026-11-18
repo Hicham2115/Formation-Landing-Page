@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import HeroVideo from "@/components/hero-video";
-import { SPOTS_LEFT } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -27,7 +26,7 @@ export default function Hero() {
               </span>
             </span>
             <span className="block overflow-hidden pb-[.08em]">
-              <span className="inline-block pr-2 font-normal  text-brand motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:300ms]">
+              <span className="inline-block pr-2 font-normal text-white motion-safe:animate-[hero-text-in_.85s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:300ms]">
                 en une journée.
               </span>
             </span>
@@ -40,7 +39,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 motion-safe:animate-[soft-rise_.7s_cubic-bezier(.22,.8,.2,1)_both] motion-safe:[animation-delay:640ms]">
             <a
               className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3.5 text-sm font-semibold duration-300 text-white transition hover:bg-white hover:text-ink"
-              href="#contact-form"
+              href="/contact"
             >
               Réserver ma place <ArrowUpRight size={15} />
             </a>
@@ -58,7 +57,7 @@ export default function Hero() {
       </section>
 
       <section
-        className="mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-[20px] border border-divider bg-divider sm:grid-cols-3 lg:grid-cols-5"
+        className="mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-[20px] border border-divider bg-divider sm:grid-cols-4"
         aria-label="Informations clés"
       >
         {[
@@ -66,9 +65,8 @@ export default function Hero() {
           ["DATE", "28.11.2026"],
           ["LIEU", "Mohammedia"],
           ["INVESTISSEMENT", "3 000 DH HT"],
-          ["PLACES", `${SPOTS_LEFT} restantes`],
         ].map(([label, value]) => (
-          <div className="bg-[#fafafa] px-4 py-5 last:col-span-2 sm:px-6 sm:py-6 sm:last:col-span-1" key={label}>
+          <div className="bg-[#fafafa] px-4 py-5 sm:px-6 sm:py-6" key={label}>
             <span className="flex items-center gap-2 text-[9px] font-semibold tracking-[.16em] text-neutral-500">
               <span className="size-1.5 rounded-full bg-brand" />
               {label}

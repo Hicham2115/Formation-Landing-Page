@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import BrandLockup from "@/components/brand-lockup";
 import MobileMenu from "@/layout/mobile-menu";
 import { navigationLinks } from "@/layout/navigation-links";
@@ -6,9 +7,9 @@ import { navigationLinks } from "@/layout/navigation-links";
 export default function Header() {
   return (
     <header className="relative z-10 flex items-center justify-between gap-4 py-3 sm:py-4">
-      <a className="pl-3 sm:pl-6" href="#top" aria-label="Full International Academy, accueil">
+      <Link className="pl-3 sm:pl-6" href="/" aria-label="Full International Academy, accueil">
         <BrandLockup />
-      </a>
+      </Link>
       <nav
         className="hidden items-center gap-8 text-[13px] font-semibold text-neutral-700 md:flex"
         aria-label="Navigation principale"
@@ -26,7 +27,7 @@ export default function Header() {
       <div className="flex shrink-0 items-center gap-3">
         <a
           className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-semibold text-white transition hover:bg-brand sm:inline-flex"
-          href="#contact-form"
+          href="/contact"
         >
           Nous contacter <ArrowUpRight size={15} />
         </a>

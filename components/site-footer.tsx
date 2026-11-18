@@ -17,7 +17,7 @@ const footerGroups = [
     links: [
       ["Informations pratiques", "#inscription"],
       ["Questions fréquentes", "#faq"],
-      ["Nous contacter", "#contact-form"],
+      ["Nous contacter", "/contact"],
     ],
   },
 ];
@@ -68,7 +68,7 @@ export default function SiteFooter() {
                 className="mt-5 inline-flex items-center gap-2 text-sm text-white underline decoration-transparent underline-offset-4 transition-colors hover:decoration-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
                 href={`tel:${phone}`}
               >
-                <Phone size={15} className="text-brand" />
+                <Phone size={15} className="text-white" />
                 +212 613 755 122
               </a>
               <address className="mt-3 space-y-1 text-sm leading-5 text-white not-italic">

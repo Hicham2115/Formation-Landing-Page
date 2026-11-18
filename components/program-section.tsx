@@ -99,7 +99,7 @@ export default function ProgramSection() {
           <Label tone="light">LE PROGRAMME</Label>
           <h2 className="text-5xl font-medium leading-[.96] tracking-[-.07em] sm:text-7xl">
             Du repère
-            <br />à la <em className="not-italic text-brand">pratique.</em>
+            <br />à la <em className="not-italic text-white">pratique.</em>
           </h2>
         </div>
         <p className="max-w-md text-[15px] leading-7 text-white/70 sm:justify-self-end">
@@ -165,8 +165,8 @@ export default function ProgramSection() {
                   aria-hidden="true"
                   className={`mt-1 transition-transform lg:hidden ${
                     activeModule === index
-                      ? "rotate-180 text-brand"
-                      : "text-white/50 group-hover:text-brand"
+                      ? "rotate-180 text-white"
+                      : "text-white/50 group-hover:text-white"
                   }`}
                   size={18}
                 />
@@ -174,8 +174,8 @@ export default function ProgramSection() {
                   aria-hidden="true"
                   className={`mt-1 hidden transition-colors lg:block ${
                     activeModule === index
-                      ? "text-brand"
-                      : "text-white/50 group-hover:text-brand"
+                      ? "text-white"
+                      : "text-white/50 group-hover:text-white"
                   }`}
                   size={17}
                 />
@@ -213,7 +213,7 @@ export default function ProgramSection() {
           <details className="group border-b border-white/15 py-4" open>
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium marker:hidden [&::-webkit-details-marker]:hidden">
               Contenu du module
-              <span className="text-lg text-brand transition-transform group-open:rotate-45">
+              <span className="text-lg text-white transition-transform group-open:rotate-45">
                 +
               </span>
             </summary>
@@ -234,8 +234,8 @@ export default function ProgramSection() {
           <Clock3 size={15} /> Format intensif sur une journée
         </span>
         <a
-          className="inline-flex items-center gap-2 text-white transition hover:text-brand"
-          href="#contact-form"
+          className="inline-flex items-center gap-2 text-white transition hover:text-white/70"
+          href="/contact"
         >
           Poser une question <ArrowRight size={15} />
         </a>
